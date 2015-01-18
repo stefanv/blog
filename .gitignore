@@ -2,5 +2,5 @@ cache
 **/__pycache__
 *.pid
 output
-*~
+**/*~
 .sass-cache
