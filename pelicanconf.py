@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Stefan van der Walt'
 SITENAME = 'Stéfan van der Walt'
-SITESUBTITLE = 'What I talk about when I talk about coding'
+#SITESUBTITLE = ''
 SITEURL = ''
 
 PATH = 'content'
@@ -45,3 +45,6 @@ THEME = 'theme/pelican-octopress-theme'
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video', 'liquid_tags.include_code',
            'liquid_tags.notebook']
+
+# Correctly grab slug
+FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
