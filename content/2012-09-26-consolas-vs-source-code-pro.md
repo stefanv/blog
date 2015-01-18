@@ -1,4 +1,5 @@
 Title: Adobe's new free font: Source Code Pro
+Slug: consolas-vs-source-code-pro
 Date: 2012-09-26 11:49
 Tags: coding, emacs, linux
 Status: published
@@ -25,7 +26,7 @@ Terminal, etc.  To make it the default font in Emacs::
 
 Here's a comparison of Consolas (left) and Source Code Pro (right):
 
-{% img /images/consolas_vs_source_code_pro.png %}
+{% img /blog/images/consolas_vs_source_code_pro.png %}
 
 Comments also on [Google+][].
 

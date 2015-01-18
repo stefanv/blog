@@ -1,4 +1,5 @@
 Title: scikits-image 0.7
+Slug: scikits-image-0-dot-7
 Date: 2012-09-30 16:18
 Comments: true
 Tags: image processing, scipy, python, science
@@ -33,7 +34,7 @@ time, we've managed to add plenty of new features and enhancements, including
 Plus, this release adds a number of bug fixes, new examples, and performance
 enhancements.
 
-{% img /images/lena_superpixels.jpg Comparison of pupular segmentation algorithms %}
+{% img /blog/images/lena_superpixels.jpg Comparison of pupular segmentation algorithms %}
 
 ## Contributors to this release
 

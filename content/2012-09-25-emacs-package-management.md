@@ -1,4 +1,5 @@
 Title: Emacs package management
+Slug: emacs-package-management
 Date: 2012-09-25 17:14
 Tags: emacs, python, scipy
 Status: published
