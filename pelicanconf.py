@@ -3,7 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Stefan van der Walt'
-SITENAME = "Stefan's blog"
+SITENAME = 'Stéfan van der Walt'
+SITESUBTITLE = 'What I talk about when I talk about coding'
 SITEURL = ''
 
 PATH = 'content'
@@ -39,7 +40,7 @@ ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 STATIC_PATHS = ['images', 'figures', 'downloads']
 
-THEME = 'theme/octopress'
+THEME = 'theme/pelican-octopress-theme'
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video', 'liquid_tags.include_code',
