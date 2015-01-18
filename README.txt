@@ -1,0 +1,18 @@
+If Pelican won't find Markdown content, do
+
+```
+pip install Markdown
+```
+
+The theme is from
+
+github.com/duilio/pelican-octopress-theme.git
+
+I like Solarized with the light code theme, so had to modify the file
+``sass/base/_solarized.scss``:
+
+```
+$solarized: light !default;
+```
+
+and then recompile the theme using ``compass compile``.
