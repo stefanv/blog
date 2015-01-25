@@ -73,7 +73,7 @@ sudo iptables -F
 `vpn_only`, and to assign your home wifi SSID to it.  A direct rule that
 blocks any non-VPN traffic can then be added to the new zone (this
 should be possible soon, and is on the firewalld
-[TODO list](https://git.fedorahosted.org/cgit/firewalld.git/tree/TODO).
+[TODO list](https://git.fedorahosted.org/cgit/firewalld.git/tree/TODO)).
 
 <!---
 # Create a new zone
