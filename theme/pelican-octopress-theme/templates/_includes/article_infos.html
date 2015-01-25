@@ -9,9 +9,13 @@
     </span>
   </span>
   {% include '_includes/article_time.html' %}
+
+<!--
   <span class="categories">
     <a class='category' href='{{ SITEURL }}/{{ article.category.url }}'>{{ article.category }}</a>
   </span>
+-->
+
   {% if article.tags %}
   <span class="categories">
     {% for tag in article.tags %}

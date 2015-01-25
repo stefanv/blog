@@ -14,6 +14,7 @@
       {% endfor %}
     </ul>
   </section>
+<!--
   {% if categories %}
   <section>
       
@@ -25,7 +26,7 @@
     </ul>
   </section>
   {% endif %} 
-
+-->
   <section>
   <h1>Tags</h1>
   {% for tag, article in tags %}
@@ -33,9 +34,23 @@
   {% endfor %}
   </section>
 
-  {% include '_includes/github.html' %}
-  {% include '_includes/social.html' %}
+<!--  {% include '_includes/github.html' %}
+  {% include '_includes/social.html' %} -->
+
+
+<div style="vertical-align: -40%; display: inline;"><a href="https://twitter.com/stefanvdwalt"
+              class="twitter-follow-button" data-show-count="false"
+              data-size="large" data-dnt="true">Follow @stefanvdwalt</a>
+<script>!function(d,s,id){var
+  js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document,
+  'script', 'twitter-wjs');</script></div>
+
+<div style="display: inline; vertical-align: -40%;"><iframe src="http://ghbtns.com/github-btn.html?user=stefanv&type=follow&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="180px"
+  height="30px"></iframe></div>
+
+
   {% include '_includes/links.html' %}
-  {% include '_includes/twitter_sidebar.html' %}
+<!--  {% include '_includes/twitter_sidebar.html' %}-->
   {% include '_includes/gplus_sidebar.html' %}
 </aside>

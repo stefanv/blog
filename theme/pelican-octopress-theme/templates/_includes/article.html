@@ -10,6 +10,17 @@
     <p class="meta">
       {% include '_includes/article_time.html' %}
       {% include '_includes/article_stats.html' %}
+      &middot;
+      {% if article.tags %}
+      <span class="categories" style="text-transform: lowercase;">
+        {% for tag in article.tags %}
+        <a class="category"
+           style="text-decoration: none;"
+           href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </span>
+      {% endif %}
+
     </p>
 </header>
 
