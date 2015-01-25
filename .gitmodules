@@ -1,3 +1,6 @@
 [submodule "plugins"]
 	path = plugins
 	url = git@github.com:getpelican/pelican-plugins.git
+[submodule "plugins_md/comments"]
+	path = plugins_md/comments
+	url = git@github.com:ryneeverett/python-markdown-comments.git

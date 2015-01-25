@@ -21,9 +21,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Homepage', 'http://mentat.za.net/'),
-         ('scikit-image', 'https://scikit-image.org/'),
-         )
+#LINKS = (('Homepage', 'http://mentat.za.net/'),
+#         ('scikit-image', 'https://scikit-image.org/'),
+#         )
 
 # Social widget
 #SOCIAL = (('You can add links in your config file', '#'),
@@ -48,3 +48,28 @@ PLUGINS = ['liquid_tags.img', 'liquid_tags.video', 'liquid_tags.include_code',
 
 # Correctly grab slug
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
+
+
+# The following markdown extension will remove any comments
+# of the form <!---   text -->   (note the three opening dashes)
+# from article input.
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__),
+                                'plugins_md/comments'))
+from mkdcomments import CommentsExtension
+
+# https://github.com/getpelican/pelican/issues/1238
+MD_EXTENSIONS = ['fenced_code',
+                 'codehilite(css_class=highlight, linenums=False)',
+                 'extra', 'sane_lists', 'smarty', 'toc',
+                 CommentsExtension()]
+
+GITHUB_USER = 'stefanv'
+TWITTER_USER = 'stefanvdwalt'
+TWITTER_FOLLOW_BUTTON = True
+SEARCH_BOX = True
+#X_MIN_READ = True
+DISPLAY_CATEGORIES_ON_MENU = False
+MENUITEMS = [('Home', 'http://mentat.za.net'),
+             ('scikit-image', 'http://skimage.org'),
+             ('GitHub', 'https://github.com/stefanv')]
