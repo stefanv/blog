@@ -16,3 +16,7 @@ $solarized: light !default;
 ```
 
 and then recompile the theme using ``compass compile``.
+
+To publish on mentat.za.net:
+
+1. make upload
