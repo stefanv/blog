@@ -4,3 +4,4 @@ cache
 output
 **/*~
 .sass-cache
+__pycache__
