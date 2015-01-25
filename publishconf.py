@@ -13,7 +13,7 @@ from pelicanconf import *
 SITEURL = 'http://mentat.za.net/blog'
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'atom.xml'
+FEED_ATOM = 'atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
