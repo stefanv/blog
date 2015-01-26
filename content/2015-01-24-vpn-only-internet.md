@@ -68,6 +68,19 @@ without the VPN, simply raze the firewall:
 sudo iptables -F
 ```
 
+**Update:** Typically, you wouldn't want the firewall to go up when
+  connecting to the wireless at work, so I added the following conditional
+  in the ``fw-up`` script:
+
+```
+iptables -F
+
+if [[ `iwgetid -r` != 'WorkSSID' ]]; then
+   # Firewall rules go here
+   ...
+fi
+```
+
 
 [^firewalld_direct_zones]: The idea would be to set up a zone, say
 `vpn_only`, and to assign your home wifi SSID to it.  A direct rule that
