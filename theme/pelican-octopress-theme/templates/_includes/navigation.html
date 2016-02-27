@@ -12,7 +12,7 @@
 </ul>
 
 
-{% if SEARCH_BOX %}
+<!-- {% if SEARCH_BOX %}
 <form action="{{ SITESEARCH|default('//google.com/search') }}" method="get">
   <fieldset role="search">
     {% if 'duckduckgo.com' in SITESEARCH|lower %}
@@ -24,6 +24,26 @@
   </fieldset>
 </form>
 {% endif %}
+-->
+
+<script>
+  (function() {
+    var cx = '001734058120475597871:piammqv2npu';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+<style type="text/css">
+  form.gsc-search-box { width: 20em; }
+</style>
+
+<div style="inline: block;"><gcse:searchbox-only></gcse:searchbox-only></div>
 
 <ul class="main-navigation">
   {% for title, link in MENUITEMS %}
