@@ -15,6 +15,7 @@ RELATIVE_URLS = False
 
 FEED_ATOM = 'atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+TAG_FEED_ATOM = 'feeds/tag_%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
