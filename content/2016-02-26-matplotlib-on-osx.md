@@ -37,7 +37,5 @@ Pros/cons:
   - Conda and pip do not always play well together.
   - Conda packages are supported almost exclusively by a single company.
 
-[^1]: Some members of the community maintain [their own
-channels](https://conda-forge.github.io), but there are still some issues to
-be aware of when [mixing those channels and the official
-ones](https://github.com/conda-forge/conda-forge.github.io/issues/22).
+[^1]: Some members of the community maintain [their own channels](https://conda-forge.github.io), but there are still some issues to
+be aware of when [mixing those channels and the official ones](https://github.com/conda-forge/conda-forge.github.io/issues/22).
