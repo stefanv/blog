@@ -108,8 +108,8 @@ github: publish
 	git push origin $(GITHUB_PAGES_BRANCH)
 
 upload: publish
-	rm -rf ../mentat-new/blog
-	cp -r output ../mentat-new/blog
+	rm -rf ../mentat/blog
+	cp -r output ../mentat/blog
 	cd ../mentat-new && \
 	git add blog && \
 	git ci -m "Blog update" && \
