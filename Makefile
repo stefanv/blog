@@ -110,7 +110,7 @@ github: publish
 upload: publish
 	rm -rf ../mentat/blog
 	cp -r output ../mentat/blog
-	cd ../mentat-new && \
+	cd ../mentat && \
 	git add blog && \
 	git ci -m "Blog update" && \
 	git push stefanv master
