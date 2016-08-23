@@ -17,7 +17,7 @@ quoted at the bottom of this post:
    as a Kobo or Nook reader).  In fact, you may not engage in any
    activity that bypasses their Digital Rights Management (or DRM).
 
-I <s>bought</s> lease more than 120 Kindle books, and to my shame
+I <s>bought</s> rent more than 120 Kindle books, and to my shame
 only realized the invasive nature of these terms now.
 
 Since your agreement with Amazon is simply a license to view material,
