@@ -8,7 +8,7 @@ we've developed an easy
 mechanism for Python web developers to
 [push messages from their Python backends to the browser](http://cesium.ml/blog/2016/07/13/a-pattern-for-websockets-in-python/).
 
-There are plenty of potential use cases, but consider, e.g., that you you want
+There are plenty of potential use cases, but consider, e.g., that you want
 to verify a credit card number submitted by your user.  Traditionally, you'd
 submit the number, and then poll the backend repeatedly from the browser.  Not
 very elegant :/
@@ -24,7 +24,7 @@ being able to notify the frontend when it needs to update itself.
 
 Let's talk a bit about Redux.  The
 [principles](http://redux.js.org/docs/introduction/ThreePrinciples.html)
-behind it is simple and elegant:
+behind it are simple and elegant:
 
 1. The entire state of your app is centrally
 stored (in the equivalent of a Python dictionary);
