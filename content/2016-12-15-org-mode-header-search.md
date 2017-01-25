@@ -6,7 +6,7 @@ In org-mode, I often have the need to jump to a top-level heading
 matching some word.
 
 Since an org-mode buffer can be searched just like any other, I can
-simply invoke forward search with `C-S`, but this will match *all*
+simply invoke forward search with `C-s`, but this will match *all*
 occurrences of the text, instead of limiting the search to headings only.
 
 This makes it hard to search for a phrase like "Travel", for which I
@@ -18,7 +18,7 @@ I have a solution of the following form:
 2. Pre-fill the text input with `^* ` so that only headings are
    matched.
 
-First, define a custom search function.  It puts the keys "^* " in the
+First, define a custom search function.  It puts the keys `^* ` in the
 "unread command events" list (i.e, a list of events waiting to be seen
 by emacs), and then launches interactive forward regular expression search.
 
