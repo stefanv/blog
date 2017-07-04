@@ -58,11 +58,14 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__),
                                 'plugins_md/comments'))
 from mkdcomments import CommentsExtension
 
-# https://github.com/getpelican/pelican/issues/1238
-MD_EXTENSIONS = ['fenced_code',
-                 'codehilite(css_class=highlight, linenums=False)',
-                 'extra', 'sane_lists', 'smarty', 'toc',
-                 CommentsExtension()]
+MARKDOWN = {
+    'extension': ['fenced_code', 'extra', 'sane_lists', 'smarty', 'toc',
+                  'codehilite', CommentsExtension],
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight',
+                                           'linenums': False}
+        }
+    }
 
 GITHUB_USER = 'stefanv'
 TWITTER_USER = 'stefanvdwalt'
