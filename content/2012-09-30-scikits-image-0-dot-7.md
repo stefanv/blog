@@ -34,7 +34,7 @@ time, we've managed to add plenty of new features and enhancements, including
 Plus, this release adds a number of bug fixes, new examples, and performance
 enhancements.
 
-{% img /blog/images/lena_superpixels.jpg Comparison of pupular segmentation algorithms %}
+![Comparison of pupular segmentation algorithms]({filename}/images/lena_superpixels.jpg)
 
 ## Contributors to this release
 

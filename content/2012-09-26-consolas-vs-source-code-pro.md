@@ -20,13 +20,13 @@ To install on Linux:
 The font should now be available for selection in apps such as Firefox, Gnome
 Terminal, etc.  To make it the default font in Emacs::
 
-```common-lisp
+```emacs-lisp
     (set-default-font "Source Code Pro")
 ```
 
 Here's a comparison of Consolas (left) and Source Code Pro (right):
 
-{% img /blog/images/consolas_vs_source_code_pro.png %}
+![Comparison: Consolas vs Source Code Pro]({filename}/images/consolas_vs_source_code_pro.png)
 
 Comments also on [Google+][].
 
@@ -34,4 +34,4 @@ Comments also on [Google+][].
 [fperez]: http://blog.fperez.org/
 [consolas]: http://www.microsoft.com/en-us/download/details.aspx?id=17879
 [scp-release]: http://blogs.adobe.com/typblography/2012/09/source-code-pro.html
-[scp-download]: https://github.com/adobe-fonts/source-code-pro/releases/tag/variable-fonts
+[scp-download]: https://github.com/adobe-fonts/source-sans-pro/releases/tag/variable-fonts

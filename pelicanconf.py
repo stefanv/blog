@@ -42,9 +42,8 @@ STATIC_PATHS = ['images', 'figures', 'downloads']
 
 THEME = 'theme/pelican-octopress-theme'
 
-PLUGIN_PATHS = ['plugins']
-PLUGINS = ['liquid_tags.img', 'liquid_tags.video', 'liquid_tags.include_code',
-           'liquid_tags.notebook']
+#PLUGIN_PATHS = ['plugins']
+#PLUGINS = ['org_reader']
 
 # Correctly grab slug
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
@@ -59,8 +58,13 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__),
 from mkdcomments import CommentsExtension
 
 MARKDOWN = {
-    'extension': ['fenced_code', 'extra', 'sane_lists', 'smarty', 'toc',
-                  'codehilite', CommentsExtension],
+    'extensions': ['markdown.extensions.fenced_code',
+                   'markdown.extensions.extra',
+                   'markdown.extensions.sane_lists',
+                   'markdown.extensions.smarty',
+                   'markdown.extensions.toc',
+                   'markdown.extensions.codehilite',
+                   CommentsExtension()],
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'highlight',
                                            'linenums': False}
