@@ -34,4 +34,4 @@ Comments also on [Google+][].
 [fperez]: http://blog.fperez.org/
 [consolas]: http://www.microsoft.com/en-us/download/details.aspx?id=17879
 [scp-release]: http://blogs.adobe.com/typblography/2012/09/source-code-pro.html
-[scp-download]: https://sourceforge.net/projects/sourcecodepro.adobe/
+[scp-download]: https://github.com/adobe-fonts/source-code-pro/releases/tag/variable-fonts
