@@ -1,12 +1,13 @@
 Title: Amazon owns your ebooks
 Tags: drm, amazon, kindle, ebooks
 Status: published
+Summary: Where we realize Amazon owns your books.
 
 Did you know that Amazon does not sell ebooks?  But, wait, you say, I
 have bought ebooks from them myself!  Sadly, that is not the case.  I
 will summarize part of the
-[Kindle Store Terms of Use](https://www.amazon.com/gp/help/customer/display.html?nodeId=201014950)
-quoted at the bottom of this post:
+[Kindle Store Terms of Use](https://www.amazon.com/gp/help/customer/display.html?nodeId=201014950) quoted
+at the bottom of this post:
 
 1. You do not own any Kindle book that you have "bought", even if it
    said "buy with one click" in the store (the book still belongs to

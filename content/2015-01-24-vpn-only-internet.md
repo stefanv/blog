@@ -2,7 +2,8 @@ Title: VPN-only access to the internet
 Tags: linux
 Status: published
 
-tl;dr A firewall setup that allows traffic to leave *only* via the VPN
+tl;dr A firewall setup that allows traffic to leave *only* via the VPN.
+<!-- PELICAN_END_SUMMARY -->
 
 A few days ago, I noticed that my outbound email wasn't being
 delivered---it seems as if my ISP blocks access to some outbound ports.

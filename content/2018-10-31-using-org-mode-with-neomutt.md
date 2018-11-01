@@ -1,6 +1,7 @@
 Title: Using org-mode with neomutt
 Tags: org-mode, emacs, python, mutt
 Status: published
+Summary: Where we store links to emails in org-mode, and open them using neomutt.
 
 [org-mode](https://orgmode.org) is, to me, is one of the most valuable
 parts of the emacs ecosystem.  I use it to take notes, plan projects,

@@ -7,6 +7,7 @@ As part of our work on [Cesium](http://cesium.ml) and its
 we've developed an easy
 mechanism for Python web developers to
 [push messages from their Python backends to the browser](http://cesium.ml/blog/2016/07/13/a-pattern-for-websockets-in-python/).
+<!-- PELICAN_END_SUMMARY -->
 
 There are plenty of potential use cases, but consider, e.g., that you want
 to verify a credit card number submitted by your user.  Traditionally, you'd

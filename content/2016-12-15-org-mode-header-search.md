@@ -1,6 +1,7 @@
 Title: Search headers in org-mode
 Tags: emacs, org-mode
 Status: published
+Summary: Where we show a quick way of navigating org-mode files.
 
 In org-mode, I often have the need to jump to a top-level heading
 matching some word.

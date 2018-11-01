@@ -42,8 +42,8 @@ STATIC_PATHS = ['images', 'figures', 'downloads']
 
 THEME = 'theme/pelican-octopress-theme'
 
-#PLUGIN_PATHS = ['plugins']
-#PLUGINS = ['org_reader']
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['summary'] # 'org_reader'
 
 # Correctly grab slug
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})-(?P<slug>.*)'
