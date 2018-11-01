@@ -19,7 +19,9 @@
     padding: .8em !important;
     @include border-radius(0);
   }
-  border: 1px solid $pre-border !important;
+  //  border: 1px solid $pre-border !important;
+  border-top: 1px solid $pre-border !important;
+  border-bottom: 1px solid $pre-border !important;
 }
 figure.code, .gist-file, pre {
   @include box-shadow(rgba(#000, .06) 0 0 10px);
@@ -82,7 +84,7 @@ pre {
   @extend .mono;
   border: 1px solid $pre-border;
   line-height: 1.45em;
-  font-size: 13px;
+  font-size: 0.75em;
   margin-bottom: 2.1em;
   padding: .8em 1em;
   color: $pre-color;
@@ -98,14 +100,14 @@ p, li {
     @extend .mono;
     display: inline-block;
     white-space: no-wrap;
-    background: #fff;
+//    background: #fff;
     font-size: .8em;
-    line-height: 1.5em;
-    color: #555;
-    border: 1px solid #ddd;
-    @include border-radius(.4em);
-    padding: 0 .3em;
-    margin: -1px 0;
+//    line-height: 1.5em;
+//    color: #555;
+//    border: 1px solid #ddd;
+//    @include border-radius(.4em);
+//    padding: 0 .3em;
+//    margin: -1px 0;
   }
   pre code { font-size: 1em !important; background: none; border: none; }
 }
@@ -192,7 +194,8 @@ p, li {
 
 .highlight, .gist-highlight {
   pre { @extend .pre-code; background: none; @include border-radius(none); border: none; padding: 0; margin-bottom: 0; }
-  margin-bottom: 1.8em;
+  margin-bottom: 1.1em;
+  margin-top: -0.5em;
   background: $base03;
   overflow-y: hidden;
   overflow-x: auto;

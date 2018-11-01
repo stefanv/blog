@@ -5,7 +5,7 @@ aside.sidebar {
   overflow: hidden;
   color: $sidebar-color;
   text-shadow: lighten($sidebar-bg, 8) 0 1px;
-  a { @extend .force-wrap; }
+  a { @extend .force-wrap; text-decoration: none;}
   section {
     @extend .sans;
     font-size: .8em;
@@ -34,8 +34,8 @@ aside.sidebar {
     list-style: none;
     padding: .5em 0;
     margin: 0;
-    border-bottom: 1px solid $sidebar-border;
-    @extend .side-shadow-border;
+//    border-bottom: 1px solid $sidebar-border;
+//    @extend .side-shadow-border;
     p:last-child {
       margin-bottom: 0;
     }

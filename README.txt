@@ -22,7 +22,8 @@ I like Solarized with the light code theme, so had to modify the file
 $solarized: light !default;
 ```
 
-and then recompile the theme using ``compass compile``.
+and then recompile the theme using ``compass compile`` (`compass` can
+be installed using `gem install --user compass`).
 
 To publish on mentat.za.net:
 

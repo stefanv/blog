@@ -1,6 +1,8 @@
 article {
   padding-top: 1em;
-  a { @extend .force-wrap; }
+  a { @extend .force-wrap; text-decoration: none; }
+  font-size: 1.2em;
+  line-height: 1.25em;
   header {
     overflow: hidden;
     position: relative;
@@ -9,12 +11,13 @@ article {
     margin-bottom: 1em;
     background: $img-border bottom left repeat-x;
     h1 {
+      font-size: 2em;
       margin: 0;
       a { text-decoration: none;
         &:hover { text-decoration: underline; } }
     }
     p {
-      font-size: .9em;
+      font-size: 1em;
       color: $text-color-light;
       margin: 0;
       &.meta {
@@ -125,7 +128,7 @@ article + article {
 
 #content div.pagination {
   text-align: center;
-  font-size: .95em;
+  font-size: 1em;
   position: relative;
   background: $img-border top left repeat-x;
   padding: {top: 1.5em; bottom: 1.5em;}
