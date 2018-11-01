@@ -21,7 +21,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-#LINKS = (('Homepage', 'http://mentat.za.net/'),
+#LINKS = (('Homepage', 'https://mentat.za.net/'),
 #         ('scikit-image', 'https://scikit-image.org/'),
 #         )
 
