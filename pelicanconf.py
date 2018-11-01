@@ -77,6 +77,5 @@ TWITTER_FOLLOW_BUTTON = True
 SEARCH_BOX = True
 #X_MIN_READ = True
 DISPLAY_CATEGORIES_ON_MENU = False
-MENUITEMS = [('Home', 'http://mentat.za.net/blog'),
-             ('mentat.za.net', 'http://mentat.za.net'),
-             ('scikit-image', 'http://skimage.org')]
+MENUITEMS = [('Blog', 'http://mentat.za.net/blog'),
+             ('mentat.za.net', 'http://mentat.za.net')]
