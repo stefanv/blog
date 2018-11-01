@@ -1,5 +1,5 @@
 Title: Compile TensorFlow from source with gcc6.1
-Tags: tensorflow python
+Tags: tensorflow, python
 Status: published
 
 Due to two bugs in gcc 6.1

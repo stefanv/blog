@@ -1,5 +1,5 @@
 Title: Search headers in org-mode
-Tags: emacs orgmode
+Tags: emacs, org-mode
 Status: published
 
 In org-mode, I often have the need to jump to a top-level heading

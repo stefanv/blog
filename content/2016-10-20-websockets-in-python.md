@@ -1,5 +1,5 @@
 Title: WebSockets in Python (and some Redux)
-Tags: web python javascript websocket redux react
+Tags: web, python, javascript, websocket, redux, react
 Status: published
 
 As part of our work on [Cesium](http://cesium.ml) and its
