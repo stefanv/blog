@@ -1,13 +1,15 @@
 Title: WebSockets in Python (and some Redux)
 Tags: web, python, javascript, websocket, redux, react
 Status: published
+Summary:
+    Where we make pushing messages from a Python backend to
+    the browser easy.
 
 As part of our work on [Cesium](http://cesium.ml) and its
 [web frontend](https://github.com/cesium-ml/cesium_web),
 we've developed an easy
 mechanism for Python web developers to
 [push messages from their Python backends to the browser](http://cesium.ml/blog/2016/07/13/a-pattern-for-websockets-in-python/).
-<!-- PELICAN_END_SUMMARY -->
 
 There are plenty of potential use cases, but consider, e.g., that you want
 to verify a credit card number submitted by your user.  Traditionally, you'd
