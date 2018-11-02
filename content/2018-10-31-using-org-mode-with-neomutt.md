@@ -1,7 +1,10 @@
-Title: Using org-mode with neomutt
+Title: Linking to emails in org-mode (using neomutt)
 Tags: org-mode, emacs, python, mutt
 Status: published
 Summary: Where we store links to emails in org-mode, and open them using neomutt.
+
+_**Update 2018-11-2:** Change the URL scheme to `message://`.
+See ["Other Systems"](#other-systems) below._
 
 [org-mode](https://orgmode.org) is, to me, is one of the most valuable
 parts of the emacs ecosystem.  I use it to take notes, plan projects,
@@ -63,7 +66,7 @@ subject = message['subject']
 # Ask emacsclient to save a link to the message
 subprocess.Popen([
     'emacsclient',
-    f'org-protocol://store-link?url=mutt:{message_id}&title={subject}'
+    f'org-protocol://store-link?url=message://{message_id}&title={subject}'
 ])
 
 ```
@@ -80,7 +83,7 @@ macro index,pager \el "|~/scripts/mutt-save-org-link.py\n"
 Using `org-protocol`, we instruct emacsclient to intercept URLs with
 the `org-protocol://` scheme, as used by our `mutt-save-org-link.py`
 script.  We also tell org-mode how to handle special URLs of the form
-`mutt:message-id+goes_here@mail.gmail.com`.  Neomutt needs to know
+`message://message-id+goes_here@mail.gmail.com`.  Neomutt needs to know
 which Maildir folder to open, so we ask `notmuch` to tell us where the
 message is located.
 
@@ -92,12 +95,12 @@ In my `~/.emacs` file I have:
 (require org-protocol)
 
 ; Call this function, which spawns neomutt, whenever org-mode
-; tries to open a link of the form mutt:message-id+goes_here@mail.gmail.com
+; tries to open a link of the form message://message-id+goes_here@mail.gmail.com
 (defun stefanv/mutt-open-message (message-id)
   "In neomutt, open the email with the the given Message-ID"
-  (interactive)
   (let*
-      ((mail-file
+      ((message-id (replace-regexp-in-string "^/*" "" message-id))
+       (mail-file
         (replace-regexp-in-string
          "\n$" "" (shell-command-to-string
                    (format "notmuch search --output=files id:%s" message-id))))
@@ -116,9 +119,9 @@ In my `~/.emacs` file I have:
                    "neomutt" "-R" "-f" mail-dir
                    "-e" (format "push '%s'" mutt-keystrokes))))
 
-; Whenever org-mode sees a link starting with `mutt:...`, it
+; Whenever org-mode sees a link starting with `message://`, it
 ; calls our `mutt-open-message` function
-(org-add-link-type "mutt" 'stefanv/mutt-open-message)
+(org-add-link-type "message" 'stefanv/mutt-open-message)
 ```
 
 There are a few caveats: if you use `maildir-utils`, the search
@@ -126,6 +129,15 @@ command is `mu find -f l i:%s` instead of notmuch; and if you are not
 on Linux, then `setsid` (which we use to launch a detached background
 process) is not going to work, and you will want to use a different
 terminal emulator.
+
+## <a name="#other-systems"></a>Other Systems
+
+[Charl Botha](https://vxlabs.com/) mentioned in the comments that, on
+MacOS,
+[org-mac-link](https://orgmode.org/worg/org-contrib/org-mac-link.html)
+lets you grab hyperlinks from a wide variety of apps.  Email messages,
+specifically, are stored as `message://message-id` URLs, which MacOS
+knows how to open.  This post has been updated to use the same link schema.
 
 ## Wrap-up
 
