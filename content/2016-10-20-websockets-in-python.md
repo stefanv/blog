@@ -5,11 +5,11 @@ Summary:
     Where we make pushing messages from a Python backend to
     the browser easy.
 
-As part of our work on [Cesium](http://cesium.ml) and its
+As part of our work on [Cesium](https://cesium-ml.org) and its
 [web frontend](https://github.com/cesium-ml/cesium_web),
 we've developed an easy
 mechanism for Python web developers to
-[push messages from their Python backends to the browser](http://cesium.ml/blog/2016/07/13/a-pattern-for-websockets-in-python/).
+[push messages from their Python backends to the browser](http://cesium-ml.org/blog/2016/07/13/a-pattern-for-websockets-in-python/).
 
 There are plenty of potential use cases, but consider, e.g., that you want
 to verify a credit card number submitted by your user.  Traditionally, you'd
@@ -82,4 +82,4 @@ self.flow.push('my_user@domain.com', 'message to the user',
 ```
 
 Please take a look at the more detailed technical description (with code!)
-[on the Cesium blog](http://cesium.ml/blog/2016/07/13/a-pattern-for-websockets-in-python/).
+[on the Cesium blog](http://cesium-ml.org/blog/2016/07/13/a-pattern-for-websockets-in-python/).
