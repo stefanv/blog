@@ -1,10 +1,6 @@
-cache
+public
 **/__pycache__
-*.pid
-output
 **/*~
-.sass-cache
-**/__pycache__
 *.swp
 \#*
 *.pyc
