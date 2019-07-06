@@ -1,8 +1,11 @@
-Title: Visualizing and pruning the docker image tree
-Date: 2015-01-18
-Tags: docker
-Status: published
-Summary: Where we prune unused Docker images, and save a lot of disk space.
+---
+title: Visualizing and pruning the docker image tree
+date: 2015-01-18
+tags: ['docker']
+status: published
+summary: Where we prune unused Docker images, and save a lot of disk space.
+---
+
 
 Visualizing the Docker image dependency tree is a useful way of
 checking image sizes and inter-image dependencies.  Since images

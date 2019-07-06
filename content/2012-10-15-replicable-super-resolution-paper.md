@@ -1,8 +1,11 @@
-Title: Replicable super-resolution paper
-Date: 2012-10-15 00:04
-Tags: super-resolution, image-processing, python, science
-Status: published
-Summary: Where I summarize 5 years of my life in 10 pages.
+---
+title: Replicable super-resolution paper
+date: 2012-10-15 00:04
+tags: ['super-resolution', 'image-processing', 'python', 'science']
+status: published
+summary: Where I summarize 5 years of my life in 10 pages.
+---
+
 
 While I loved the topic of my PhD, I had to take a break after staring at that
 problem for several years.  Thereafter, I was side-tracked by

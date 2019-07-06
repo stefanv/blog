@@ -1,7 +1,10 @@
-Title: Python & Matplotlib on OSX
-Tags: python
-Status: published
-Summary: Where we discuss two ways of installing Matplotlib on MacOS.
+---
+title: Python & Matplotlib on OSX
+tags: ['python']
+status: published
+summary: Where we discuss two ways of installing Matplotlib on MacOS.
+---
+
 
 One day, we will hopefully have a grand unified build and package management
 system for Python where everything is free & open and Just Works (TM).  Until

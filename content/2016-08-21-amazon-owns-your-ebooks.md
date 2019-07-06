@@ -1,7 +1,10 @@
-Title: Amazon owns your ebooks
-Tags: drm, amazon, kindle, ebooks
-Status: published
-Summary: Where we realize Amazon owns your books.
+---
+title: Amazon owns your ebooks
+tags: ['drm', 'amazon', 'kindle', 'ebooks']
+status: published
+summary: Where we realize Amazon owns your books.
+---
+
 
 Did you know that Amazon does not sell ebooks?  But, wait, you say, I
 have bought ebooks from them myself!  Sadly, that is not the case.  I

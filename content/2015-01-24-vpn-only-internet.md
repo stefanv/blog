@@ -1,6 +1,9 @@
-Title: VPN-only access to the internet
-Tags: linux
-Status: published
+---
+title: VPN-only access to the internet
+tags: ['linux']
+status: published
+---
+
 
 tl;dr A firewall setup that allows traffic to leave *only* via the VPN.
 <!-- PELICAN_END_SUMMARY -->

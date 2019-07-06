@@ -1,9 +1,12 @@
-Title: scikits-image 0.7
-Slug: scikits-image-0-dot-7
-Date: 2012-09-30 16:18
-Comments: true
-Tags: image processing, scipy, python, science
-Status: published
+---
+title: scikits-image 0.7
+slug: scikits-image-0-dot-7
+date: 2012-09-30 16:18
+comments: true
+tags: ['image' 'processing', 'scipy', 'python', 'science']
+status: published
+---
+
 
 We're happy to announce the 7th version of scikits-image!
 

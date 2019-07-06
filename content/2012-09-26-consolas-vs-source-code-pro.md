@@ -1,8 +1,11 @@
-Title: Adobe's new free font: Source Code Pro
-Slug: consolas-vs-source-code-pro
-Date: 2012-09-26 11:49
-Tags: coding, emacs, linux
-Status: published
+---
+title: Adobe's new free font: Source Code Pro
+slug: consolas-vs-source-code-pro
+date: 2012-09-26 11:49
+tags: ['coding', 'emacs', 'linux']
+status: published
+---
+
 
 Adobe yesterday
 [released its free and open source Type family, Source Code Pro][scp-release],

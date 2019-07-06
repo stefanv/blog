@@ -1,8 +1,11 @@
-Title: Emacs package management
-Slug: emacs-package-management
-Date: 2012-09-25 17:14
-Tags: emacs, python, scipy
-Status: published
+---
+title: Emacs package management
+slug: emacs-package-management
+date: 2012-09-25 17:14
+tags: ['emacs', 'python', 'scipy']
+status: published
+---
+
 
 I recently tried to install MuMaMo as one of the dependencies for Takafumi
 Arakaki's [Emacs-based IPython notebook][ein].  The instructions on the MuMaMo

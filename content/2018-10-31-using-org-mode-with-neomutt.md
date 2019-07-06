@@ -1,7 +1,10 @@
-Title: Linking to emails in org-mode (using neomutt)
-Tags: org-mode, emacs, python, mutt
-Status: published
-Summary: Where we store links to emails in org-mode, and open them using neomutt.
+---
+title: Linking to emails in org-mode (using neomutt)
+tags: ['org-mode', 'emacs', 'python', 'mutt']
+status: published
+summary: Where we store links to emails in org-mode, and open them using neomutt.
+---
+
 
 _**Update 2018-11-2:** Change the URL scheme to `message://`.
 See ["Other Systems"](#other-systems) below._

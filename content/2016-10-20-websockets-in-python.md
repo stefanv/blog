@@ -1,9 +1,12 @@
-Title: WebSockets in Python (and some Redux)
-Tags: web, python, javascript, websocket, redux, react
-Status: published
-Summary:
-    Where we make pushing messages from a Python backend to
+---
+title: WebSockets in Python (and some Redux)
+tags: ['web', 'python', 'javascript', 'websocket', 'redux', 'react']
+status: published
+summary:
+    where we make pushing messages from a python backend to
     the browser easy.
+---
+
 
 As part of our work on [Cesium](https://cesium-ml.org) and its
 [web frontend](https://github.com/cesium-ml/cesium_web),

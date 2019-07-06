@@ -1,7 +1,10 @@
-Title: Compile TensorFlow from source with gcc6.1
-Tags: tensorflow, python
-Status: published
-Summary: Where we build TensorFlow from scratch.
+---
+title: Compile TensorFlow from source with gcc6.1
+tags: ['tensorflow', 'python']
+status: published
+summary: Where we build TensorFlow from scratch.
+---
+
 
 Due to two bugs in gcc 6.1
 [affecting the re2 library](https://github.com/google/re2/issues/102)

@@ -1,8 +1,11 @@
-Title: SciPy2013 Proceedings
-Date: 2013-06-27 17:20
-Tags: scipy, python
-Status: published
-Summary: Where I announce the SciPy 2013 proceedings, and talk about how we did it.
+---
+title: SciPy2013 Proceedings
+date: 2013-06-27 17:20
+tags: ['scipy', 'python']
+status: published
+summary: Where I announce the SciPy 2013 proceedings, and talk about how we did it.
+---
+
 
 The talks for the 12th (fantastic) Python in Science conference just concluded,
 and I am happy to announce the
