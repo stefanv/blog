@@ -1,5 +1,5 @@
 Title: Designing for Intelligent Augmentation
-Tags: artifial intelligence, machine learning, design
+Tags: artificial intelligence, machine learning, design
 Status: published
 Summary: How can we better design systems that combine computational inference and human intelligence?
 
@@ -11,7 +11,7 @@ A week ago, I attended a family event where I got pulled into a surprisingly ani
 
 ![Lemmings walking off a cliff, which they do—but to migrate, not commit suicide](https://i.ytimg.com/vi/fmnTfkFN3KE/hqdefault.jpg)
 
-E.g., Google Maps tells you where to drive—they maybe even give you one or two route options.  But the overarching goal is to get you to your destination in the shortest amount of time.  What if you felt like taking a scenic drive, or wanted to explore a bit?  In that case, a map that showed a compass and traffic for all nearby roads would be much more helpful. How many times to we drive past a national monument such as [Bodie](http://www.parks.ca.gov/?page_id=509), or a street festival on the next block over without realizing it? Maps could certainly alert us to these.
+E.g., Google Maps tells you where to drive—they maybe even give you one or two route options.  But the overarching goal is to get you to your destination in the shortest amount of time.  What if you felt like taking a scenic drive, or wanted to explore a bit?  In that case, a map that showed a compass and traffic for all nearby roads would be much more helpful. How many times do we drive past a national monument such as [Bodie](http://www.parks.ca.gov/?page_id=509), or a street festival on the next block over without realizing it? Maps could certainly alert us to these.
 
 At the Berkeley Institute for Data Science, I build a lot of open source research software. I've learned that systems that work *with* humans are often both simpler to develop and ultimately more effective than fully automated systems. When we wrote [Inselect](https://naturalhistorymuseum.github.io/inselect/) with the Natural History Museum, it would have been very hard to do a 100% accurate segmentation of insect speciments (especially since many of the photos this would be applied to contained insects unseen during training).  But if you can provide reasonable accuracy, humans can easily adjust for minor discrepancies and still save a lot of time.
 
