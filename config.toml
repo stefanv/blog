@@ -1,0 +1,11 @@
+baseURL = "http://mentat.za.net/blog/"
+languageCode = "en-us"
+title = "Stéfan's blog"
+theme = "tale-hugo"
+disqusShortname = "stefanvdwalt"
+
+[frontmatter]
+date = [":filename", ":default"]
+
+[params]
+author = "Stéfan van der Walt"
