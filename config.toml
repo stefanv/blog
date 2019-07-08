@@ -9,3 +9,7 @@ date = [":filename", ":default"]
 
 [params]
 author = "Stéfan van der Walt"
+
+[permalinks]
+  # mimic pelican permalink configuration
+  posts = "/:year/:month/:day/:slug/"
