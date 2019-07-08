@@ -13,3 +13,15 @@ author = "Stéfan van der Walt"
 [permalinks]
   # mimic pelican permalink configuration
   posts = "/:year/:month/:day/:slug/"
+
+[mediaTypes]
+[mediaTypes."application/atom"]
+suffixes = ["xml"]
+
+[outputFormats.Atom]
+mediaType = "application/atom"
+baseName = "atom"
+isPlainText = false
+
+[outputs]
+home = ["HTML", "Atom"]
