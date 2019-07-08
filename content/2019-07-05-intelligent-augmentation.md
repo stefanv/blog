@@ -1,8 +1,8 @@
 ---
-title: Designing for Intelligent Augmentation
-tags: ['artifial' 'intelligence', 'machine' 'learning', 'design']
+title: "Designing for Intelligent Augmentation"
+tags: ['artificial intelligence', 'machine learning', 'design']
 status: published
-summary: How can we better design systems that combine computational inference and human intelligence?
+summary: "How can we better design systems that combine computational inference and human intelligence?"
 ---
 
 

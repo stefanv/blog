@@ -2,7 +2,7 @@
 
 html:
 	@hugo
-	@touch site/public/.nojekyll
+	@touch public/.nojekyll
 
 serve:
 	@hugo --i18n-warnings server -D

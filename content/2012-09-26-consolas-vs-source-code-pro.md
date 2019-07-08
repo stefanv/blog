@@ -1,7 +1,7 @@
 ---
-title: Adobe's new free font: Source Code Pro
+title: "Adobe's new free font: Source Code Pro"
 slug: consolas-vs-source-code-pro
-date: 2012-09-26 11:49
+date: "2012-09-26 11:49"
 tags: ['coding', 'emacs', 'linux']
 status: published
 ---
