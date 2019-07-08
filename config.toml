@@ -6,6 +6,7 @@ disqusShortname = "stefanvdwalt"
 
 [frontmatter]
 date = [":filename", ":default"]
+publishDate = [":filename"]
 
 [params]
 author = "Stéfan van der Walt"
