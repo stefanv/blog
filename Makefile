@@ -8,11 +8,11 @@ serve:
 	@hugo --i18n-warnings server
 
 clean:
-	@rm -rf public
+	rm -rf public
 
-github: html
-	rm -rf ../mentat/blog
-	cp -r public/* ../mentat/blog
+github: | clean html
+	rm -rf ../mentat/blog && \
+	cp -r public ../mentat/blog && \
 	cd ../mentat && \
 	git add blog && \
 	git ci -m "Blog update" && \
