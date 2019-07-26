@@ -1,10 +1,7 @@
-cache
+public
+resources/_gen
 **/__pycache__
-*.pid
-output
 **/*~
-.sass-cache
-**/__pycache__
 *.swp
 \#*
 *.pyc

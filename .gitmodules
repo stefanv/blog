@@ -1,8 +1,3 @@
-[submodule "plugins"]
-	path = plugins
-    url = git@github.com:getpelican/pelican-plugins.git
-    ignore = dirty
-[submodule "plugins_md/comments"]
-	path = plugins_md/comments
-    url = git@github.com:ryneeverett/python-markdown-comments.git
-    ignore = dirty
+[submodule "themes/tale-hugo"]
+	path = themes/tale-hugo
+	url = https://github.com/EmielH/tale-hugo

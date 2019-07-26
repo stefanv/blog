@@ -1,0 +1,61 @@
+body {
+    font-size: 95%;
+}
+
+.post-title {
+    font-size: 2em;
+}
+
+.catalogue-title {
+    font-size: 1.5em;
+}
+
+.catalogue-line {
+    display: none;
+}
+
+.catalogue-item {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 1rem;
+}
+
+.catalogue-tags {
+    font-size: 80%;
+}
+
+.post-info {
+    text-align: left;
+}
+
+.post-title {
+    text-align: left;
+    padding-bottom: 0;
+    margin-bottom: 0.1em;
+}
+
+.post-tags {
+    margin-bottom: 2em;
+    display: inline-block;
+}
+
+.post-tag {
+    font-family: monospace;
+    display: inline;
+}
+
+.highlight {
+    padding: 0;
+}
+
+.highlight pre {
+    padding: 1rem;
+}
+
+.post {
+    padding-top: 1rem;
+}
+
+.post-date {
+    display: inline-block;
+    padding-right: 0.5rem;
+}
