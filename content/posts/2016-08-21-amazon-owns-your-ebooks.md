@@ -72,7 +72,7 @@ still preferable to using a proprietary format to boot.
 For those buying from the Kobo store, some of the books on their
 shelves are available DRM-free, and is indicated as follows:
 
-![Kobo DRM information]({static}/images/kobo_drm_comparison.png)
+{{< figure src="/posts/images/kobo_drm_comparison.png" title="Kobo DRM information" >}}
 
 Defective by Design maintains a
 [list of DRM-free publishers and stores](https://www.defectivebydesign.org/guide/ebooks).

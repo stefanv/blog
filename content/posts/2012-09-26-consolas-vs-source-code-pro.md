@@ -29,7 +29,7 @@ Terminal, etc.  To make it the default font in Emacs::
 
 Here's a comparison of Consolas (left) and Source Code Pro (right):
 
-![Comparison: Consolas vs Source Code Pro]({static}/images/consolas_vs_source_code_pro.png)
+{{< figure src="/posts/images/consolas_vs_source_code_pro.png" title="Comparison: Consolas vs Source Code Pro" >}}
 
 Comments also on [Google+][].
 
