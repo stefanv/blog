@@ -5,7 +5,7 @@ html:
 	@touch public/.nojekyll
 
 serve:
-	@hugo --i18n-warnings server -D
+	@hugo --i18n-warnings server
 
 clean:
 	@rm -rf public
