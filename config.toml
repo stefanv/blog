@@ -10,6 +10,7 @@ publishDate = [":filename"]
 
 [params]
 author = "Stéfan van der Walt"
+css = ["custom.css"]
 
 [permalinks]
   # mimic pelican permalink configuration
