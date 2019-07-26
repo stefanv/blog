@@ -4,6 +4,9 @@ title = "Stéfan's blog"
 theme = "tale-hugo"
 disqusShortname = "stefanvdwalt"
 
+pygmentsCodeFences = true
+pygmentsStyle = "friendly"
+
 [frontmatter]
 date = [":filename", ":default"]
 publishDate = [":filename"]
