@@ -167,7 +167,7 @@ with napari.gui_qt():
 I also happened to have ground truth labels available, so I loaded those up the same way I did the volume, and added it to the visualization:
 
 ```python
-viewer.add_labels(labels + 1, name='Labels')
+viewer.add_labels(labels, name='Labels')
 ```
 
 {{< figure src="/posts/images/napari-ct-volume.jpg" >}}
