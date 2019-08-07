@@ -43,7 +43,7 @@ Whereas NumPy used to be the reference implementation for array computation in P
 
 ## PyTorch and TensorFlow easily consume Python images
 
-Images in scientific Python (`scikit-image`, `opencv`, `ITK`, etc.) are represented as NumPy arrays.  It is trivial to pass these arrays into deep learning libraries such as TensorFlow:
+Images in scientific Python (`scikit-image`, `opencv`, etc.) are represented as NumPy arrays.  It is trivial to pass these arrays into deep learning libraries such as TensorFlow:
 
 ```python
 
