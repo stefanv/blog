@@ -1,6 +1,6 @@
 ---
 title: "Scientific Python at Microscopy & MicroAnalysis 2019"
-tags: ['python', 'visualization', 'image processing']
+tags: ['python', 'scipy', 'visualization', 'image processing']
 draft: false
 summary: "Where we demonstrate a new way of doing interactive image analysis."
 ---
