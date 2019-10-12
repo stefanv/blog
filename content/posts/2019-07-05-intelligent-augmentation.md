@@ -2,7 +2,7 @@
 title: "Designing for Intelligent Augmentation"
 tags: ['artificial intelligence', 'machine learning', 'design']
 status: published
-summary: "How can we better design systems that combine computational inference and human intelligence?"
+description: "How can we better design systems that combine computational inference and human intelligence?"
 ---
 
 The first issue of the [Harvard Data Science Review](https://hdsr.mitpress.mit.edu/) was published last month.  I enjoyed [Michael Jordan's opinion piece](https://hdsr.mitpress.mit.edu/pub/wot7mkc1), in which he considers progress made (and, yes, hype!) in so-called artificial intelligence.  Particularly, I was excited about the phrase "Intelligent Augmentation"—the pursuit of systems that enhances our ability to reason about a subject, by providing additional analysis, data, and emphasis. Jordan writes:

@@ -2,7 +2,7 @@
 title: Linking to emails in org-mode (using neomutt)
 tags: ['org-mode', 'emacs', 'python', 'mutt']
 status: published
-summary: Where we store links to emails in org-mode, and open them using neomutt.
+description: Where we store links to emails in org-mode, and open them using neomutt.
 ---
 
 

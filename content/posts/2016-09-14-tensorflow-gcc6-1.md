@@ -2,7 +2,7 @@
 title: Compile TensorFlow from source with gcc6.1
 tags: ['tensorflow', 'python']
 status: published
-summary: Where we build TensorFlow from scratch.
+description: Where we build TensorFlow from scratch.
 ---
 
 

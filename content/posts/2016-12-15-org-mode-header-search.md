@@ -2,7 +2,7 @@
 title: Search headers in org-mode
 tags: ['emacs', 'org-mode']
 status: published
-summary: Where we show a quick way of navigating org-mode files.
+description: Where we show a quick way of navigating org-mode files.
 ---
 
 

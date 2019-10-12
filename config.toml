@@ -1,7 +1,7 @@
 baseURL = "https://mentat.za.net/blog/"
 languageCode = "en-us"
 title = "Stéfan's blog"
-theme = "tale-hugo"
+theme = ["hugo-atom-feed", "tale-hugo"]
 disqusShortname = "stefanvdwalt"
 
 pygmentsCodeFences = true
@@ -29,4 +29,4 @@ baseName = "atom"
 isPlainText = false
 
 [outputs]
-home = ["HTML", "Atom"]
+home = ["HTML", "ATOM"]

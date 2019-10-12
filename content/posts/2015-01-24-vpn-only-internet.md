@@ -2,7 +2,7 @@
 title: VPN-only access to the internet
 tags: ['linux']
 status: published
-summary: Where we set up a firewall that allows traffic to leave only via the VPN.
+description: Where we set up a firewall that allows traffic to leave only via the VPN.
 ---
 
 A few days ago, I noticed that my outbound email wasn't being
