@@ -1,13 +1,13 @@
 body {
-    font-size: 95%;
+    font-size: 110%;
 }
 
 .post-title {
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 .catalogue-title {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .catalogue-line {
@@ -30,11 +30,11 @@ body {
 .post-title {
     text-align: left;
     padding-bottom: 0;
-    margin-bottom: 0.1em;
+    margin-bottom: 0.1rem;
 }
 
 .post-tags {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
     display: inline-block;
 }
 
@@ -58,4 +58,8 @@ body {
 .post-date {
     display: inline-block;
     padding-right: 0.5rem;
+}
+
+.highlight {
+    font-size: 1rem;
 }
