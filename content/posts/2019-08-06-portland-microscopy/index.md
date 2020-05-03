@@ -72,7 +72,7 @@ def inception_predict(image):
         print(f'{klass:>15} ({prob:.3f})')
 ```
 
-{{< figure src="/posts/images/chelsea.png" title="Chelsea the Cat" >}}
+{{< figure src="chelsea.png" title="Chelsea the Cat" >}}
 
 
 For example, when running `inception_predict` on `skimage.data.chelsea()`, I get:
@@ -139,7 +139,7 @@ vol = da.stack(sample_arrays)
 
 I have 101 slices of 2048x2048 each, so the resulting `dask` `Array` volume (at this stage fully virtual, without any data inside) is:
 
-{{< figure height="200" src="/posts/images/dask-array-stack.png" >}}
+{{< figure height="200" src="dask-array-stack.png" >}}
 
 We can do numerous operations on this array, such as summing it with `vol.sum(axis=0)`, although this still yields an uncomputed `dask` `Array`.  To get actual values, we need to call:
 
@@ -170,7 +170,7 @@ I also happened to have ground truth labels available, so I loaded those up the 
 viewer.add_labels(labels, name='Labels')
 ```
 
-{{< figure src="/posts/images/napari-ct-volume.jpg" >}}
+{{< figure src="napari-ct-volume.jpg" >}}
 
 If you'd like to play with Napari yourself, I have a [3D cell segmentation example available online](https://gist.github.com/stefanv/7c296c26b0c3624746f4317bed6a3540).
 
