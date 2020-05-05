@@ -7,25 +7,23 @@ to enable browsers to download only the resolution that they need.
 page bundle. It will break otherwise.)
 
 Improvements that are currently out of reach of my Hugo template programming "skills":
-- gracefully handle images that are not in page bundle, i.e. no image processing available
-- use a single configurable sizes array, and derive everything from there
+- [ ] gracefully handle images that are not in page bundle, i.e. no image processing available
+- [x] use a single configurable sizes array, and derive everything from there
 
 See https://cpbotha.net/2020/05/02/drop-in-replacement-for-hugo-figure-shortcode-with-img-srcset-support/
 
 - original srcset img shortcode from: https://laurakalbag.com/processing-responsive-images-with-hugo/
 - original hugo figure shortcode from: https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/shortcodes/figure.html
+- no unnecessary resizes and more nudges by Stéfan van der Walt https://mentat.za.net/
 - mashing together and srcset logic fixes by Charl P. Botha https://cpbotha.net/
 
 */}}
 
+{{/* hugo will resize to all of these sizes that are smaller than your original. configure if you like! */}}
+{{ $sizes := (slice "480" "800" "1200" "1500") }}
+
 {{/* get file that matches the filename as specified as src="" in shortcode */}}
 {{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
-
-{{/* resize the src image to the given sizes; this will be cached by hugo */}}
-{{ $tiny := ($src.Resize "480x") }}
-{{ $small := ($src.Resize "800x") }}
-{{ $medium := ($src.Resize "1200x") }}
-{{ $large := ($src.Resize "1500x") }}
 
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
     {{- if .Get "link" -}}
@@ -34,14 +32,13 @@ See https://cpbotha.net/2020/05/02/drop-in-replacement-for-hugo-figure-shortcode
     <img sizes="(min-width: 35em) 1200px, 100vw"
          {{/* only srcset images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}  
          srcset='
-         {{ if ge $src.Width "480" }}{{ with $tiny.Permalink }}{{.}} 480w{{ end }}{{ end }}
-         {{ if ge $src.Width "800" }}{{ with $small.Permalink }},{{.}} 800w{{ end }} {{ end }}
-         {{ if ge $src.Width "1200" }}{{ with $medium.Permalink }},{{.}} 1200w{{ end }}{{ end }}
-         {{ if ge $src.Width "1500" }}{{ with $large.Permalink }},{{.}} 1500w{{ end }}{{ end }}'
+         {{ range $sizes }}
+           {{ if ge $src.Width . }}{{ ($src.Resize (printf "%sx" .)).Permalink }} {{ (printf "%sw" .) }},{{ end }}
+         {{ end }}'
          {{/* when no support for srcset (old browsers, RSS), we load small (800px) */}}
          {{/* if image smaller than 800, then load the image itself */}}
          {{ if ge $src.Width "800" }}
-           src="{{ $small.Permalink }}"
+           src="{{ ($src.Resize "800x").Permalink }}"
          {{ else }}
            src="{{ $src.Permalink }}"
          {{ end }}
