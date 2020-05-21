@@ -5,7 +5,7 @@ description: Where I show how to hook up org-mode and Google Assistant
 tags: ['org-mode', 'productivity']
 ---
 
-I often want to capture tasks on the go—in a hurry. When there's no time to fire up [organice](https://organice.200ok.ch/) or [http://www.orgzly.com/](http://www.orgzly.com/), being able to transcribe tasks comes in really handy.
+I often want to capture tasks on the go—in a hurry. When there's no time to fire up [organice](https://organice.200ok.ch/) or [Orgzly](http://www.orgzly.com/), being able to transcribe tasks comes in really handy.
 
 In this post, I show how, on Android phones, you can hook up Google's Assistant with org-mode, so that you can *speak* notes and have them appear as TODO items in a buffer.
 
