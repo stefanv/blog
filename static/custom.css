@@ -63,3 +63,12 @@ body {
 .highlight {
     font-size: 1rem;
 }
+
+/* For MathJAX */
+
+code.has-jax {
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    margin: 0;
+}
