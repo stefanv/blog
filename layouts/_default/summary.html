@@ -8,7 +8,11 @@
       {{ end }}
     </div>
     <p>
-      {{ if isset .Params "summary" }}{{ .Params.Summary }}{{ else }}{{ .Summary }}{{ end }}
+      {{ if .Description }}
+        {{ .Description }}
+      {{ else }}
+        {{ .Summary }}
+      {{ end }}
     </p>
   </a>
 </div>
