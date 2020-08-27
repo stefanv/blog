@@ -20,6 +20,9 @@
   <link rel="stylesheet" href="{{ . | relURL }}">
   {{ end -}}
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/ico" sizes="16x16" href="/images/favicon.ico">
+
   <!-- RSS -->
   <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
