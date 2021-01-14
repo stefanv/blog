@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<!-- When updating this file, also update _default/list.html -->
+
+<main>
+  {{ partial "index/introduction.html" . }}
+
+  <div class="catalogue">
+    {{ range where (.Paginate .Site.RegularPages).Pages "Section" "posts" }}
+      {{ .Render "summary" }}
+    {{ end }}
+  </div>
+
+  {{ template "_internal/pagination.html" . }}
+
+</main>
+
+{{ end }}

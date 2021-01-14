@@ -72,3 +72,21 @@ code.has-jax {
     border: none !important;
     margin: 0;
 }
+
+.pagination {
+  list-style: none;
+}
+
+.pagination li {
+  display: inline;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.pagination .active a {
+  color: black;
+}
+
+.pagination .disabled {
+  display: none;
+}
