@@ -2,6 +2,8 @@
   var disqus_identifier = {{ printf "http://stefanv.github.com%s" .Page.RelPermalink }};
 </script>
 
-<div style="border-top: 0.5px solid #e5e5e5; padding-top: 1em;">
-  {{ template "_internal/disqus.html" . }}
-</div>
+{{ if .Params.comments }}
+  <div style="border-top: 0.5px solid #e5e5e5; padding-top: 1em;">
+    {{ template "_internal/disqus.html" . }}
+  </div>
+{{ end }}
