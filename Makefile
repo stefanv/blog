@@ -3,6 +3,10 @@
 html:
 	@hugo
 	@touch public/.nojekyll
+	# Default feed contains all posts
+	@mv public/atom.xml public/all.xml
+	# Default feed excludes personal category
+	@cp public/posts/atom.xml public/atom.xml
 
 serve:
 	@hugo --i18n-warnings server
