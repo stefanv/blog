@@ -3,9 +3,11 @@
 html:
 	@hugo
 	@touch public/.nojekyll
-	# Default feed contains all posts
+
+	@# Default feed contains all posts
 	@mv public/atom.xml public/all.xml
-	# Default feed excludes personal category
+
+	@# Default feed excludes personal category
 	@cp public/posts/atom.xml public/atom.xml
 
 serve:
