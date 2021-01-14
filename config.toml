@@ -14,10 +14,12 @@ publishDate = [":filename"]
 [params]
 author = "Stéfan van der Walt"
 css = ["custom.css"]
+feedSections = ["posts", "personal"]
 
 [permalinks]
   # mimic pelican permalink configuration
   posts = "/:year/:month/:day/:slug/"
+  personal = "/:year/:month/:day/:slug/"
 
 [mediaTypes]
 [mediaTypes."application/atom"]
@@ -30,3 +32,5 @@ isPlainText = false
 
 [outputs]
 home = ["HTML", "ATOM"]
+section = ["HTML", "ATOM"]
+term = ["HTML", "ATOM"]
