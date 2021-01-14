@@ -3,16 +3,19 @@ languageCode = "en-us"
 title = "Stéfan's blog"
 theme = ["hugo-atom-feed", "tale-hugo"]
 disqusShortname = "stefanvdwalt"
+disableKinds = ["RSS"]
 
 pygmentsCodeFences = true
 pygmentsStyle = "friendly"
+
+[Author]
+name = "Stéfan van der Walt"
 
 [frontmatter]
 date = [":filename", ":default"]
 publishDate = [":filename"]
 
 [params]
-author = "Stéfan van der Walt"
 css = ["custom.css"]
 feedSections = ["posts", "personal"]
 
