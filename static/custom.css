@@ -33,6 +33,15 @@ body {
     margin-bottom: 0.1rem;
 }
 
+.post-date {
+  display: inline-block;
+  padding-right: 0.5rem;
+}
+
+.post-author {
+  display: inline;
+}
+
 .post-tags {
     margin-bottom: 2rem;
     display: block;
@@ -53,11 +62,6 @@ body {
 
 .post {
     padding-top: 1rem;
-}
-
-.post-date {
-    display: inline-block;
-    padding-right: 0.5rem;
 }
 
 .highlight {
