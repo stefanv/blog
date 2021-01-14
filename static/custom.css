@@ -35,7 +35,7 @@ body {
 
 .post-tags {
     margin-bottom: 2rem;
-    display: inline-block;
+    display: block;
 }
 
 .post-tag {
@@ -88,5 +88,9 @@ code.has-jax {
 }
 
 .pagination .disabled {
+  display: none;
+}
+
+.read-more {
   display: none;
 }
