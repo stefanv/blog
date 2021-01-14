@@ -6,6 +6,17 @@
   {{ end }}
 </div>
 
+<!--
+by
+<div class="post-author">
+  {{- if .Params.Author }}
+    {{ .Params.Author }}
+  {{- else }}
+    {{ .Site.Author.name }}
+  {{- end }}
+</div>
+-->
+
 <div class="post-tags">
   {{ range .Params.Tags }}
     <div class="post-tag">
