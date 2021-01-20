@@ -1,7 +1,7 @@
 ---
 title: "How to Write Good Scientific Software"
 draft: false
-description: Where I discuss social, mechanical, and scholarly disciplines required for writing good scientific software.
+description: Where I discuss social and technical disciplines required for writing good scientific software.
 tags: ['science', 'software', 'coding']
 ---
 
@@ -308,7 +308,7 @@ same way, and ask that collaborators use the same standards.  In the
 Python world, we have PEP8; but use whatever your community
 recommends.
 
-## Scholarly publication
+## Publication
 
 Finally, your scientific code will likely be of better quality if it
 gets made public.  Why?  Because if you know your code is going to be
