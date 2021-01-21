@@ -3,4 +3,4 @@
 	url = https://github.com/EmielH/tale-hugo
 [submodule "themes/hugo-atom-feed"]
 	path = themes/hugo-atom-feed
-	url = git@github.com:kaushalmodi/hugo-atom-feed
+	url = https://github.com/kaushalmodi/hugo-atom-feed
