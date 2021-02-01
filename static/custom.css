@@ -10,6 +10,10 @@ body {
   font-size: 120%;
 }
 
+blockquote {
+  color: #5d6775;
+}
+
 .post {
   max-width: 33em;
 }
