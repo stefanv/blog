@@ -16,10 +16,12 @@ serve:
 clean:
 	rm -rf public
 
-github: | clean html
-	rm -rf ../mentat/blog && \
-	cp -r public ../mentat/blog && \
-	cd ../mentat && \
-	git add blog && \
-	git ci -m "Blog update" && \
-	git push stefanv master
+## A push is now enough to rebuild via Netlify
+#
+#github: | clean html
+#	rm -rf ../mentat/blog && \
+#	cp -r public ../mentat/blog && \
+#	cd ../mentat && \
+#	git add blog && \
+#	git ci -m "Blog update" && \
+#	git push stefanv master
