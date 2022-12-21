@@ -11,7 +11,7 @@ html:
 	@cp public/posts/atom.xml public/atom.xml
 
 serve:
-	@hugo --i18n-warnings server
+	@hugo --printI18nWarnings server
 
 clean:
 	rm -rf public

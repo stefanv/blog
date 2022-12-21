@@ -1,13 +1,13 @@
 html {
   font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
   font-family: Georgia,"Bitstream Charter","Times New Roman",Times,serif;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   color: #3c434c;
-  font-size: 120%;
+  font-size: 100%;
 }
 
 blockquote {
@@ -15,7 +15,7 @@ blockquote {
 }
 
 .post {
-  max-width: 33em;
+  max-width: 40em;
 }
 
 .post-title {
@@ -69,19 +69,20 @@ blockquote {
 }
 
 .highlight {
-    padding: 0;
+  padding: 0;
 }
 
 .highlight pre {
+    font-size: 0.8rem;
     padding: 1rem;
+}
+
+code {
+  white-space: pre;
 }
 
 .post {
     padding-top: 1rem;
-}
-
-.highlight {
-    font-size: 1rem;
 }
 
 /* For MathJAX */

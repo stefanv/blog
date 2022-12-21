@@ -5,3 +5,4 @@ resources/_gen
 *.swp
 \#*
 *.pyc
+.hugo_build.lock

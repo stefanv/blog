@@ -5,8 +5,8 @@ theme = ["hugo-atom-feed", "tale-hugo"]
 disqusShortname = "stefanvdwalt"
 disableKinds = ["RSS"]
 
-pygmentsCodeFences = true
-pygmentsStyle = "friendly"
+#pygmentsCodeFences = true
+#pygmentsStyle = "friendly"
 
 [Author]
 name = "Stéfan van der Walt"
@@ -16,7 +16,7 @@ date = [":filename", ":default"]
 publishDate = [":filename"]
 
 [params]
-css = ["custom.css"]
+css = ["custom.css", "witchhazel.css"]
 feedSections = ["posts", "personal"]
 
 [permalinks]
@@ -37,3 +37,7 @@ isPlainText = false
 home = ["HTML", "ATOM"]
 section = ["HTML", "ATOM"]
 term = ["HTML", "ATOM"]
+
+[markup.highlight]
+style = "witchhazel"
+noClasses = false
