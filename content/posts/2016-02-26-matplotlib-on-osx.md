@@ -2,7 +2,7 @@
 title: Python & Matplotlib on OSX
 tags: ['python']
 status: published
-description: Where we discuss two ways of installing Matplotlib on MacOS.
+summary: Where we discuss two ways of installing Matplotlib on MacOS.
 ---
 
 

@@ -2,7 +2,7 @@
 title: Visualizing and pruning the docker image tree
 tags: ['docker']
 status: published
-description: Where we prune unused Docker images, and save a lot of disk space.
+summary: Where we prune unused Docker images, and save a lot of disk space.
 ---
 
 

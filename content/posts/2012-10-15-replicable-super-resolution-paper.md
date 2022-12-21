@@ -3,7 +3,7 @@ title: Replicable super-resolution paper
 date: 2012-10-15 00:04
 tags: ['super-resolution', 'image-processing', 'python', 'science']
 status: published
-description: Where I summarize 5 years of my life in 10 pages.
+summary: Where I summarize 5 years of my life in 10 pages.
 ---
 
 

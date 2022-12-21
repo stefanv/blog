@@ -1,7 +1,7 @@
 ---
 title: "How to Write Good Scientific Software"
 draft: false
-description: Where I discuss social and technical disciplines required for writing good scientific software.
+summary: Where I discuss social and technical disciplines required for writing good scientific software.
 tags: ['science', 'software', 'coding']
 ---
 

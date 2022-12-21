@@ -2,7 +2,7 @@
 title: "Scientific Python at Microscopy & MicroAnalysis 2019"
 tags: ['python', 'scipy', 'visualization', 'image processing']
 draft: false
-description: "Where we demonstrate a new way of doing interactive image analysis."
+summary: "Where we demonstrate a new way of doing interactive image analysis."
 ---
 
 Today, I presented a talk titled ["Scientific Python: A Mature Computational Ecosystem for Microscopy"](https://doi.org/10.1017/S1431927619001399) [[PDF](http://www.jhmartins.com/mm2019c/7337/0132.pdf)] at the Microscopy and MicroAnalysis conference in Portland.

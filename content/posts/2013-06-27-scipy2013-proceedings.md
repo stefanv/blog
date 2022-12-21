@@ -3,7 +3,7 @@ title: SciPy2013 Proceedings
 date: 2013-06-27 17:20
 tags: ['scipy', 'python']
 status: published
-description: Where I announce the SciPy 2013 proceedings, and talk about how we did it.
+summary: Where I announce the SciPy 2013 proceedings, and talk about how we did it.
 ---
 
 

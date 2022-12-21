@@ -1,7 +1,7 @@
 ---
 title: "Voice capture org-mode tasks on Android"
 draft: false
-description: Where I show how to hook up org-mode and Google Assistant
+summary: Where I show how to hook up org-mode and Google Assistant
 tags: ['org-mode', 'productivity']
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Mastodon: How To List Followed Hashtags"
 draft: false
+summary: "Where I share a Python script for querying the Mastodon API to show followed hashtags."
 tags: ['mastodon']
 ---
 
@@ -10,8 +11,6 @@ interface for listing which hashtags you follow. Since there is an
 [extensive API](https://docs.joinmastodon.org/api/), I thought it
 would be straightforward to grab the list that way---and, it is, but
 you need to perform the authorization dance correctly!
-
-<!--more-->
 
 ## Query steps
 

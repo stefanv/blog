@@ -2,7 +2,7 @@
 title: WebSockets in Python (and some Redux)
 tags: ['web', 'python', 'javascript', 'websocket', 'redux', 'react']
 status: published
-description:
+summary:
     Where we make pushing messages from a python backend to
     the browser easy.
 ---

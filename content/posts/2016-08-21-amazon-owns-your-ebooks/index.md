@@ -2,7 +2,7 @@
 title: Amazon owns your ebooks
 tags: ['drm', 'amazon', 'kindle', 'ebooks']
 status: published
-description: Where we realize Amazon owns your books.
+summary: Where we realize Amazon owns your books.
 ---
 
 
