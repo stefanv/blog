@@ -4,7 +4,8 @@ draft: false
 tags: ['mastodon']
 ---
 
-Mastodon recently introduced hashtags, but does not yet have a user
+Mastodon recently introduced hashtags, but [does not
+yet](https://github.com/mastodon/mastodon/issues/20763) have a user
 interface for listing which hashtags you follow. Since there is an
 [extensive API](https://docs.joinmastodon.org/api/), I thought it
 would be straightforward to grab the list that way---and, it is, but
