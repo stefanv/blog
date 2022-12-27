@@ -15,6 +15,7 @@ you need to perform the authorization dance correctly!
 ## Query steps
 
 1. To access the Mastodon API, you first register an application.
+   You can choose any appropriate name for your app; here I use `ls_hashtag`.
 2. The application can make **public** queries, but to access personal information must first be granted access by the user.
 3. Once the user authorizes the app, an oauth token can be obtained.
 4. This token, in turn, allows personal API access.
@@ -36,6 +37,7 @@ import sys
 
 
 SERVER = 'https://your.mastodon.server'
+APP_NAME = 'ls_hashtag'
 CONFIG = os.path.expandvars('$HOME/.config/mastodon-tags.yaml')
 
 
@@ -72,7 +74,7 @@ if not 'client_id' in cfg:
     data = post(
         f'{SERVER}/api/v1/apps',
         json={
-            'client_name': 'ls_hashtag',
+            'client_name': APP_NAME,
             'redirect_uris': 'urn:ietf:wg:oauth:2.0:oob',
             'scopes': 'read'
         }
