@@ -6,6 +6,7 @@ tags: ['emacs', 'python', 'scipy']
 status: published
 ---
 
+**EDIT 2023-01-06:** Nowadays, there is [`use-package`](https://github.com/jwiegley/use-package).
 
 I recently tried to install MuMaMo as one of the dependencies for Takafumi
 Arakaki's [Emacs-based IPython notebook][ein].  The instructions on the MuMaMo
