@@ -18,6 +18,7 @@ publishDate = [":filename"]
 [params]
 css = ["custom.css", "witchhazel.css"]
 feedSections = ["posts", "personal"]
+comments = true
 
 [permalinks]
   # mimic pelican permalink configuration
