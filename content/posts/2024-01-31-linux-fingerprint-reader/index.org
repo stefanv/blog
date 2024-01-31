@@ -69,7 +69,7 @@ easy way to unlock my screen lock, [[https://github.com/swaywm/swaylock][swayloc
 Fortunately, =swaylock= has built-in PAM support, but the same concept
 shown here works for all apps that support PAM, including login.
 
-Following [[https://wiki.archlinux.org/title/fprint][these ArchWiki fprintd instructions]], I added a PAM profile for for swaylock. In
+Following [[https://wiki.archlinux.org/title/fprint][ArchWiki fprintd instructions]], I added a PAM profile for swaylock. In
 =/etc/pam.d/swaylock=:
 
 #+begin_src
