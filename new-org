@@ -1,0 +1,9 @@
+root=content/posts
+filename=${root}/$(date +%Y-%m-%d)-"$1".org
+dirname=${root}/$(basename $filename .org)
+
+hugo new ${filename}
+mkdir $dirname
+mv $filename $dirname/index.org
+
+echo "Post now lives in [${dirname}/index.org]"

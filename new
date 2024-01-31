@@ -2,7 +2,7 @@ root=content/posts
 filename=${root}/$(date +%Y-%m-%d)-"$1".md
 dirname=${root}/$(basename $filename .md)
 
-hugo new ${root}/$(date +%Y-%m-%d)-"$1".md
+hugo new ${filename}
 mkdir $dirname
 mv $filename $dirname/index.md
 

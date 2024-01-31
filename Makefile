@@ -13,6 +13,9 @@ html:
 serve:
 	@hugo --printI18nWarnings server
 
+servedrafts:
+	@hugo --buildDrafts server
+
 clean:
 	rm -rf public
 
