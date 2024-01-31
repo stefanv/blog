@@ -1,0 +1,101 @@
+#+title: Linux Fingerprint Reader
+#+summary: Where we configure Fedora, PAM, and swaylock to accept fingerprint authentication
+#+tags[]: linux framework
+
+My [[https://frame.work/products/laptop-12-gen-intel][Framework laptop]], which I love, has a [[https://frame.work/products/fingerprint-reader-kit][built-in fingerprint
+reader]]. I didn't realize it before, because the reader is one-and-the-same as
+the power button!
+
+Of course, once discovered, it had to be put into use. But, how do
+fingerprints work under Linux?
+
+1. A hardware device, typically USB, takes the fingerprint.
+2. Software, =fprintd,= enrolls and verifies fingerprints.
+3. PAM, the Pluggable Authentication Module system for Unix, ties all
+   this into your login system.
+
+** Hardware compatibility
+
+The =lsusb= command gives a long list of input devices. None of them
+/looked/ like a fingerprint reader, but upon closer inspection we have:
+
+#+begin_src
+Bus 003 Device 006: ID 27c6:609c Shenzhen Goodix Technology Co.,Ltd. [unknown]
+#+end_src
+
+Indeed, it is included in the [[https://fprint.freedesktop.org/supported-devices.html][fprint list of supported devices]]!
+
+** Software installation
+
+On Fedora, this was straightforward. Just remember the PAM module as
+well, which we'll use later:
+
+#+begin_src sh
+sudo dnf install fprintd fprintd-pam
+#+end_src
+
+** Taking fingerprints
+
+I registered two fingers:
+
+#+begin_src 
+sudo fprintd-enroll stefan -l left-index-finger
+sudo fprintd-enroll stefan -l right-index-finger
+#+end_src
+
+Note the username as the first argument, otherwise all your fingerprints
+are belong to root.
+
+** Enabling PAM: take 1
+
+My first attempt to enable fingerprint was:
+
+#+begin_src sh
+sudo authselect current
+sudo authselect enable-feature with-fingerprint
+sudo authselect apply-changes
+#+end_src
+
+*HOWEVER*, this results in /both/ a password and a username being
+required. And =sudo= first gives you the option of taking a fingerprint
+(this can be bypassed with Ctrl-C, and also does not appear when using
+SSH).
+
+** Enabling PAM: take 2
+
+I had no desire to use fingerprints for logging in; I just need an
+easy way to unlock my screen lock, [[https://github.com/swaywm/swaylock][swaylock]].
+
+Fortunately, =swaylock= has built-in PAM support, but the same concept
+shown here works for all apps that support PAM, including login.
+
+Following [[https://wiki.archlinux.org/title/fprint][these ArchWiki fprintd instructions]], I added a PAM profile for for swaylock. In
+=/etc/pam.d/swaylock=:
+
+#+begin_src
+auth    sufficient     pam_unix.so try_first_pass likeauth nullok
+auth    sufficient     pam_fprintd.so
+auth    required       pam_deny.so
+account required       pam_unix.so
+#+end_src
+
+By default, =swaylock= will send through empty passwords to PAM for
+authentication, which is what we want. But if you have a configuration
+file in, e.g., =~/.swaylock/config=, you may need to comment out
+=ignore-empty-password=.
+
+And, voila, either password or fingerprint accepted for unlocking!  If
+you need both, you can just modify the =pam.d= profile from =sufficient=
+to =required=.
+
+** Further improvements
+
+To enable fingerprint and password at the same time, you'd need
+[[https://gitlab.com/mishakmak/pam-fprint-grosshack][pam-fprint-grosshack]] or similar, but I'm happy to press enter before
+fingerprint.
+
+-----
+
+P.S. This is the first blog post I've written in org-syntax. Hugo
+supports it seamlessly, and since I keep work journal entries in
+org-mode anyway, it was a lot easier to copy content this way.
