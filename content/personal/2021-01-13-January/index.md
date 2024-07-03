@@ -2,7 +2,7 @@
 title: "First Post!"
 draft: false
 description: "Where I introduce personal blog posts."
-categories: personal
+categories: [personal]
 tags: 
 ---
 
