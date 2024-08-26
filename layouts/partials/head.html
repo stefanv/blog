@@ -31,6 +31,7 @@
   {{- $fallback_atom_outputformat := $posts_section.OutputFormats.Get "ATOM" }}
   {{- $atom := (or $default_atom_outputformat $fallback_atom_outputformat).Permalink }}
   <link href="{{ $atom }}" rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" />
+  <script src="{{ "js/darkmode.js" | relURL }}"></script>
 
   {{ partial "mathjax_support.html" . }}
 </head>

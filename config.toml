@@ -8,9 +8,6 @@ disableKinds = ["RSS"]
 #pygmentsCodeFences = true
 #pygmentsStyle = "friendly"
 
-[Author]
-name = "Stéfan van der Walt"
-
 [frontmatter]
 date = [":filename", ":default"]
 publishDate = [":filename"]
@@ -19,6 +16,7 @@ publishDate = [":filename"]
 css = ["custom.css", "witchhazel.css"]
 feedSections = ["posts", "personal"]
 comments = true
+author = { name = "Stéfan van der Walt" }
 
 [permalinks]
   # mimic pelican permalink configuration
