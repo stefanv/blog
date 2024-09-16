@@ -40,3 +40,9 @@ term = ["HTML", "ATOM"]
 [markup.highlight]
 style = "witchhazel"
 noClasses = false
+
+[goldmark.renderHooks.image]
+enableDefault = true
+
+[goldmark.renderHooks.link]
+enableDefault = true
