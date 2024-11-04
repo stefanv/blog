@@ -1,7 +1,7 @@
 ---
 title: "scikits-image 0.7"
 slug: scikits-image-0-dot-7
-date: "2012-09-30 16:40"
+date: 2012-09-30
 comments: true
 tags: ['image processing', 'scipy', 'python', 'science']
 status: published

@@ -1,7 +1,7 @@
 ---
 title: Emacs package management
 slug: emacs-package-management
-date: 2012-09-25 17:14
+date: 2012-09-25
 tags: ['emacs', 'python', 'scipy']
 status: published
 ---
