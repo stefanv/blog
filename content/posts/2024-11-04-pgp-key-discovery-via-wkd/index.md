@@ -88,9 +88,10 @@ There are two options for hosting WKD:
     This process is [covered in detail by friend Charl over at vxlabs](https://vxlabs.com/2024/10/24/openpgp-wkd-for-easy-pgp-key-discovery/).
 
 (2) Host a static website at https://openpgpkey.yourdomain.org.
-    This approach has the advantage that you can also publish external
+    This approach has the slight advantage that it lets you publish external
     signatures of your key (i.e., when your friends and colleagues sign
     your keys)—which get stripped by keys.openpgp.org.
+    But [newer versions of GPG will ignore those anyway](https://inversegravity.net/2019/web-of-trust-dead/).
 
 The site should have the following structure:
 
