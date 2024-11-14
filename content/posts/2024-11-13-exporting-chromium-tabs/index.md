@@ -92,6 +92,6 @@ Once you're satisfied that it does what it's supposed to, here are the steps for
 1. Clone or download [the repository](https://github.com/stefanv/chrome-tabs2text).
 2. In Chrome, navigate to Extensions -> Manage Extensions, and toggle the "Developer Mode" button at the top right.
 3. Click "Load unpacked", and select the repository directory from (1).
-4. `tabs2txt` should now be visible under the list of extensions (typically a little puzzle piece in the top bar).
+4. `tabs2text` should now be visible under the list of extensions (typically a little puzzle piece in the top bar).
 
 Enjoy, and file a pull request if you make improvements!
