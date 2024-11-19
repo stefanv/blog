@@ -20,7 +20,7 @@ by
 <div class="post-tags">
   {{ range .Params.Tags }}
     <div class="post-tag">
-      <a href={{ path.Join "/tags/" . | relURL }}>
+      <a href={{ path.Join "tags/" . | relURL }}>
         #{{ . }}
       </a>
     </div>

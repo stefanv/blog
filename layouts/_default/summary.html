@@ -5,7 +5,7 @@
   </a>
   <div class="catalogue-tags">
     {{ range .Params.Tags }}
-    <div class="post-tag"><a href={{ path.Join "/tags/" . | relURL }}>#{{ . }}</a></div>
+    <div class="post-tag"><a href={{ path.Join "tags/" . | relURL }}>#{{ . }}</a></div>
     {{ end }}
   </div>
   <p>

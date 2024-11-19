@@ -17,6 +17,8 @@ markup:
         enableDefault: true
       link:
         enableDefault: true
+    renderer:
+      unsafe: true
 
 frontmatter:
   date: [":filename", ":default"]
