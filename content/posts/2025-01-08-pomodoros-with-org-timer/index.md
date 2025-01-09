@@ -151,3 +151,57 @@ Alas, my advice fell on deaf ears. Do you perhaps know how to make it work? Let 
 ## The end
 
 En dit is dit. Geniet die tamaties!
+
+----
+
+### Waybar update
+
+I didn't like that the monitoring script talked to emacs every 30s, regardless of whether the timer is running. So, here is a modified version that triggers waybar updates only when the timer is started, and pauses them when the timer ends:
+
+`org-timer-remaining`:
+
+```sh
+#/bin/sh
+
+function print_status() {
+  REPR=`emacsclient --eval '(org-timer-waybar-repr)' | sed 's/"//g'`
+  echo $REPR
+}
+
+print_status
+
+MONITORING="no"
+
+trap 'MONITORING="yes"' USR1
+trap 'MONITORING="no"; print_status' USR2
+
+while true; do
+  if [ $MONITORING == "yes" ]; then
+    print_status
+  fi
+  sleep 30 &
+  wait $!
+done
+```
+
+Because the script now does the polling internally, you invoke it slightly differently from waybar:
+
+```json
+    "custom/org_timer": {
+        "exec": "~/scripts/org-timer-remaining",
+    }
+```
+
+And, because the script handles the signals (instead of waybar), we need to update our hooks too:
+
+```lisp
+(add-hook 'org-timer-set-hook
+  (lambda ()
+    (start-process
+    "waybar-monitor-start" nil "pkill" "-USR1" "-f" "sh .*org-timer-remaining")))
+
+(add-hook 'org-timer-done-hook
+  (lambda ()
+    (start-process
+    "waybar-monitor-pause" nil "pkill" "-USR2" "-f" "sh .*org-timer-remaining")))
+```
