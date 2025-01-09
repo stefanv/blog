@@ -132,7 +132,8 @@ a.anchor {
 #table-of-contents {
   position: fixed;
   top: 5rem;
-  right: 0;
+  left: 50%;
+  margin-left: 400px;
   padding-top: 3rem;
   float: right;
   font-size: 90%;
