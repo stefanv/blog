@@ -25,6 +25,7 @@ frontmatter:
   publishDate: [":filename"]
 
 params:
+  toc: true
   css: ["custom.css", "witchhazel.css"]
   feedSections: ["posts", "personal"]
   comments: true

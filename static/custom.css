@@ -120,3 +120,45 @@ code.has-jax {
 .read-more {
   display: none;
 }
+
+a.anchor {
+  visibility: hidden;
+}
+
+:is(h1, h2, h3, h4, h5, h6):hover .anchor {
+  visibility: visible;
+}
+
+#table-of-contents {
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  padding-top: 3rem;
+  float: right;
+  font-size: 90%;
+}
+
+#table-of-contents ul li {
+  margin-top: 0;
+}
+
+#table-of-contents a {
+  color: #3c434c;
+}
+
+#table-of-contents a:hover {
+  text-decoration: underline;
+}
+
+#table-of-contents .heading {
+  color: #3c434c;
+  font-family: sans
+}
+
+#table-of-contents .contents {
+  margin-top: -0.5rem;
+}
+
+#table-of-contents ul ul {
+  font-size: 85%;
+}
