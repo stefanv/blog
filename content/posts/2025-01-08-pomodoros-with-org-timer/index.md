@@ -54,6 +54,20 @@ To display org-timer's status on waybar, we'll query emacs (via emacsclient[^ema
 Here's the function, `org-timer-waybar-repr`, which generates the status text:
 
 ```lisp
+(defun html-escape-string (string)
+  "Escape special characters in STRING for HTML."
+  (let ((result ""))
+    (dolist (char (string-to-list string) result)
+      (setq result
+            (concat result
+                    (pcase char
+                      (?\& "&amp;")
+                      (?\< "&lt;")
+                      (?\> "&gt;")
+                      (?\" "&quot;")
+                      (?\' "&#39;")
+                      (_ (char-to-string char))))))))
+
 (defun org-timer-minutes-to-string ()
   "Remaining org-timer minutes, rounded to nearest minute, as string."
   (let* ((time-string (org-timer-value-string))
@@ -66,14 +80,13 @@ Here's the function, `org-timer-waybar-repr`, which generates the status text:
 
 (defun org-timer-waybar-repr ()
   "Format org-timer status for waybar"
-  (if (or
-        (not (boundp 'org-timer-countdown-timer))
-        (not org-timer-countdown-timer))
-  "🤗"
-  (concat
-    "🍅 " (org-timer-minutes-to-string)
-    "  🎯 " (org-link-display-format
-              (substring-no-properties org-timer-countdown-timer-title)))))
+  (if (or (not (boundp 'org-timer-countdown-timer)) (not org-timer-countdown-timer))
+    "🤗"
+    (html-escape-string
+      (concat
+        "🍅 "(org-timer-minutes-to-string)
+        "  🎯 " (org-link-display-format
+                  (substring-no-properties org-timer-countdown-timer-title))))))
 ```
 
 Next, we need a script, say `org-timer-remaining`, to access this text:
