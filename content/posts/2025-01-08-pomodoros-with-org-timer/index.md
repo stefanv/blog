@@ -69,14 +69,14 @@ Here's the function, `org-timer-waybar-repr`, which generates the status text:
                       (_ (char-to-string char))))))))
 
 (defun org-timer-minutes-to-string ()
-  "Remaining org-timer minutes, rounded to nearest minute, as string."
+  "Remaining org-timer minutes, rounded up to nearest minute, as string."
   (let* ((time-string (org-timer-value-string))
          (parts (split-string time-string ":"))
          (hours (string-to-number (nth 0 parts)))
          (minutes (string-to-number (nth 1 parts)))
          (seconds (string-to-number (nth 2 parts)))
          (total-minutes (+ (* hours 60) minutes (/ seconds 60.0))))
-    (number-to-string (round total-minutes))))
+    (number-to-string (ceiling total-minutes))))
 
 (defun org-timer-waybar-repr ()
   "Format org-timer status for waybar"
@@ -167,7 +167,9 @@ En dit is dit. Geniet die tamaties!
 
 ----
 
-### Waybar update
+## Updates
+
+### Waybar: poll during timer only
 
 I didn't like that the monitoring script talked to emacs every 30s, regardless of whether the timer is running. So, here is a modified version that triggers waybar updates only when the timer is started, and pauses them when the timer ends:
 
@@ -217,4 +219,69 @@ And, because the script handles the signals (instead of waybar), we need to upda
   (lambda ()
     (start-process
     "waybar-monitor-pause" nil "pkill" "-USR2" "-f" "sh .*org-timer-remaining")))
+```
+
+### Reporting pomodoros
+
+It can be useful to see how many pomodoros were spent on any given
+project. With the modification below, we add a LOGBOOK entry to the
+TODO header on which the pomodoro was started upon its completion:
+
+```lisp
+(defvar stefanv/pomodoro-start-time nil
+  "Stores the start time of the Pomodoro timer.")
+
+(defvar stefanv/pomodoro-start-mark nil
+  "Stores a marker to the starting point of the Pomodoro.")
+
+(defun stefanv/org-timer-start-pomodoro ()
+  "Start a Pomodoro timer and record the starting point and time."
+  (interactive)
+  (when (string-equal major-mode "org-mode")
+    (setq stefanv/pomodoro-start-time (current-time))
+    (setq stefanv/pomodoro-start-mark (point-marker)))
+  ;; Call org-timer-set-timer with a 1 (25 min) prefix argument
+  (let ((current-prefix-arg 1))
+    (call-interactively #'org-timer-set-timer)))
+
+(defun stefanv/org-log-pomodoro-duration ()
+  "Logs the duration of the completed Pomodoro to the item where it was started."
+  (let* ((end-time (current-time))
+         (duration (float-time (time-subtract end-time stefanv/pomodoro-start-time)))
+         (duration-mins (floor (/ duration 60)))
+         (log-entry (format "- 🍅: %dm completed %s"
+                      duration-mins
+                      (format-time-string "%Y-%m-%d %H:%M" end-time))))
+
+(defun stefanv/org-log-pomodoro-duration ()
+  "Logs the duration of the completed Pomodoro to the item where it was started."
+  (let* ((end-time (current-time))
+         (duration (float-time (time-subtract end-time stefanv/pomodoro-start-time)))
+         (duration-mins (floor (/ duration 60)))
+         (log-entry (format "- 🍅: %dm completed %s"
+                      duration-mins
+                      (format-time-string "%Y-%m-%d %H:%M" end-time))))
+
+    (when stefanv/pomodoro-start-time
+      (org-with-point-at stefanv/pomodoro-start-mark
+        (save-excursion
+          (org-back-to-heading t)
+          ;; Find LOGBOOK or create it after heading/meta-data
+          (let ((drawer-regexp "^:LOGBOOK:")
+                (subtree-end (save-excursion
+                               (org-end-of-subtree t)
+                               (point))))
+            (if (re-search-forward drawer-regexp subtree-end t)
+                ;; Drawer exists: insert after :LOGBOOK: line
+                (progn
+                  (forward-line 1)
+                  (insert log-entry "\n"))
+              ;; Drawer does not exist: create it after meta-data
+              (org-end-of-meta-data)
+              (insert (format ":LOGBOOK:\n%s\n:END:\n" log-entry)))))))
+  ;; Cleanup
+  (set-marker stefanv/pomodoro-start-mark nil)
+  (setq stefanv/pomodoro-start-time nil)))
+
+(add-hook 'org-timer-done-hook #'stefanv/org-log-pomodoro-duration)
 ```
