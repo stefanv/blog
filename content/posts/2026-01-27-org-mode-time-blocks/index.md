@@ -221,7 +221,7 @@ daily plan smoothly:
        (message "Shifted active timestamps by %s minutes." minutes)))
    ```
 
-### Conclusion
+## Conclusion
 
 I've presented three utility functions that help me quickly plan and
 organize my day. I'd love to hear from you how you plan yours!
