@@ -163,3 +163,11 @@ a.anchor {
 #table-of-contents ul ul {
   font-size: 85%;
 }
+
+figcaption h4 {
+  font-weight: normal;
+  font-style: italic;
+  font-family: initial;
+  font-size: 90%;
+  margin-top: 1rem;
+}
