@@ -89,9 +89,9 @@ for more on
 
 The above configuration works fine, but I noticed that some answers
 were outdated.  Gemini supports "grounding" via Google Search. For
-example, instead of telling you TypeScript 5.3 is the newest release
-(which it was, at the time of its training), it can use Google Search
-to verify that, in fact, the latest version is 5.9.
+example, instead of telling you that TypeScript 5.3 is the newest
+release (which it was, at the time of its training), it can use Google
+Search to verify that, in fact, the latest version is 5.9.
 
 [gptel#750](https://github.com/karthink/gptel/issues/750) tracks the
 issue, but in the meantime you can manually adjust the query sent to
