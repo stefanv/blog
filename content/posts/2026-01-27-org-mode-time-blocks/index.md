@@ -1,7 +1,7 @@
 ---
 title: "org-mode Day Planning with Time Blocks"
 draft: false
-summary: A description of my system for time-blocking my day in org-mode.
+summary: How I use org-mode for time-blocking my day.
 tags: ['emacs', 'productivity']
 ---
 
