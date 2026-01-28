@@ -87,6 +87,8 @@ for more on
 
 ### Adding Google search
 
+**EDIT: I've since noticed that, while adding the search tool this way works, it also messes up macher. So, don't try this yet until #750 is resolved.**
+
 The above configuration works fine, but I noticed that some answers
 were outdated.  Gemini supports "grounding" via Google Search. For
 example, instead of telling you that TypeScript 5.3 is the newest
