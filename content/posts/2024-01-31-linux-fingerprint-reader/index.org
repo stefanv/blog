@@ -48,6 +48,8 @@ are belong to root.
 
 ** Enabling PAM: take 1
 
+/Do not do this!/
+
 My first attempt to enable fingerprint was:
 
 #+begin_src sh
@@ -72,12 +74,24 @@ shown here works for all apps that support PAM, including login.
 Following [[https://wiki.archlinux.org/title/fprint][ArchWiki fprintd instructions]], I added a PAM profile for swaylock. In
 =/etc/pam.d/swaylock=:
 
+*EDIT: 2026-03-13: update pam rules*
+
 #+begin_src
-auth    sufficient     pam_unix.so try_first_pass likeauth nullok
-auth    sufficient     pam_fprintd.so
-auth    required       pam_deny.so
-account required       pam_unix.so
+# Try password first; then
+# - if password is correct, skip 1 line (skip fprintd) and go to 'required',
+# - if it's wrong or empty, 'ignore' and move to the next line (fprintd).
+auth    [success=1 default=ignore]  pam_unix.so
+auth    sufficient                  pam_fprintd.so
+
+# Fallback
+auth    required                    pam_unix.so try_first_pass
+
+# Default permission checks: password expiry, access hours, account lock etc.
+account required                    pam_unix.so
 #+end_src
+
+If there is an existing line like `auth include login`, you need to
+comment that out.
 
 By default, =swaylock= will send through empty passwords to PAM for
 authentication, which is what we want. But if you have a configuration
@@ -85,8 +99,14 @@ file in, e.g., =~/.swaylock/config=, you may need to comment out
 =ignore-empty-password=.
 
 And, voila, either password or fingerprint accepted for unlocking!  If
-you need both, you can just modify the =pam.d= profile from =sufficient=
-to =required=.
+you want to require both password and fingerprint, you can use the
+following profile:
+
+#+begin_src
+auth    required    pam_unix.so
+auth    required    pam_fprintd.so
+account required    pam_unix.so
+#+end_src
 
 ** Further improvements
 
