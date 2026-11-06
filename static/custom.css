@@ -1,12 +1,29 @@
+/* Percentages scale with the reader's browser font-size setting. */
 html {
   font-feature-settings: "kern" 1, "liga" 1, "onum" 1;
   font-family: Georgia,"Bitstream Charter","Times New Roman",Times,serif;
-  font-size: 12pt;
+  font-size: 100%;
+}
+
+@media (min-width: 600px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+
+:root.light {
+  --text-color: #3c434c;
+  --quote-color: #5d6775;
+}
+
+:root:not(.light) {
+  --text-color: #c9ccd1;
+  --quote-color: #9aa1ab;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
-  color: #3c434c;
+  color: var(--text-color);
   font-size: 100%;
 }
 
@@ -16,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 blockquote {
-  color: #5d6775;
+  color: var(--quote-color);
 }
 
 .post {
@@ -36,7 +53,7 @@ blockquote {
 }
 
 .catalogue-item {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--grey-2);
     padding-bottom: 1rem;
 }
 
@@ -110,7 +127,7 @@ code.has-jax {
 }
 
 .pagination .active a {
-  color: black;
+  color: var(--text-color);
 }
 
 .pagination .disabled {
@@ -144,7 +161,7 @@ a.anchor {
 }
 
 #table-of-contents a {
-  color: #3c434c;
+  color: var(--text-color);
 }
 
 #table-of-contents a:hover {
@@ -152,7 +169,7 @@ a.anchor {
 }
 
 #table-of-contents .heading {
-  color: #3c434c;
+  color: var(--text-color);
   font-family: sans
 }
 
