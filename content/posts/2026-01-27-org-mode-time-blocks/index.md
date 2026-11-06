@@ -67,7 +67,7 @@ The part I'd like to discuss in this post is the "Plan" section, where I outline
 The time stamps in `org-mode` are neat: you'll see the lunch entry
 goes from 13:00 to 13:45 (and this is how it is stored on disk), but
 when modifying it in `org-mode` it is displayed for editing in the
-minibuffer as `13:00+0:45`. This makes it very easy to adjust the
+minibuffer as `13:00+0:45`[^entering-timestamps]. This makes it very easy to adjust the
 *duration* of an event. Note that the day timestamp (`%u`) is
 [inactive](https://orgmode.org/manual/Timestamps.html#index-timestamp_002c-inactive),
 whereas the time blocks are active, so that only the latter appear in
@@ -78,6 +78,8 @@ today's Agenda view.
   alt="A screenshot of my time block planning in Emacs for 2026-01-27"
   title="My time block planning for 2026-01-27, showing active timestamps following one another."
 >}}
+
+[^entering-timestamps]: How to enter an inactive time range timestamp: `C-!`, then type a time + offset, e.g. `9:00+0:30`.
 
 ### Elisp functions
 
