@@ -12,8 +12,8 @@
   <!-- CSS -->
   {{- $inServerMode := hugo.IsServer }}
   {{- $cssTarget := "css/style.css" }}
-  {{- $cssOptions := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
-  {{- $style := resources.Get "scss/tale.scss" | toCSS $cssOptions }}
+  {{- $cssOptions := cond ($inServerMode) (dict "transpiler" "dartsass" "targetPath" $cssTarget "enableSourceMap" true) (dict "transpiler" "dartsass" "targetPath" $cssTarget "outputStyle" "compressed") }}
+  {{- $style := resources.Get "scss/tale.scss" | css.Sass $cssOptions }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
   {{ range .Site.Params.css -}}
@@ -26,9 +26,9 @@
   <!-- RSS -->
   <!-- If section name is not defined, as is the case for pages such as "Follow this blog",
        grab the feed for posts (i.e., excluding personal). -->
-  {{- $default_atom_outputformat := .OutputFormats.Get "ATOM" }}
+  {{- $default_atom_outputformat := .OutputFormats.Get "atom" }}
   {{- $posts_section := .Site.GetPage "section" "posts" }}
-  {{- $fallback_atom_outputformat := $posts_section.OutputFormats.Get "ATOM" }}
+  {{- $fallback_atom_outputformat := $posts_section.OutputFormats.Get "atom" }}
   {{- $atom := (or $default_atom_outputformat $fallback_atom_outputformat).Permalink }}
   <link href="{{ $atom }}" rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" />
   <script src="{{ "js/darkmode.js" | relURL }}"></script>

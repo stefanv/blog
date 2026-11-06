@@ -1,8 +1,8 @@
 baseURL: "https://mentat.za.net/blog/"
-languageCode: "en-us"
+locale: "en-US"
 title: "Stéfan's blog"
 theme:
-  - "hugo-atom-feed"
+  - "hugo-atom-layout"
   - "tale-hugo"
 disqusShortname: "stefanvdwalt"
 disableKinds: ["RSS"]
@@ -27,7 +27,8 @@ frontmatter:
 params:
   toc: true
   css: ["custom.css", "witchhazel.css"]
-  feedSections: ["posts", "personal"]
+  atom:
+    sections: ["posts", "personal"]
   comments: true
   author:
     name: "Stéfan van der Walt"
@@ -36,20 +37,10 @@ permalinks:
   posts: "/:year/:month/:day/:slug/"
   personal: "/:year/:month/:day/:slug/"
 
-mediaTypes:
-  application/atom:
-    suffixes: ["xml"]
-
-outputFormats:
-  Atom:
-    mediaType: "application/atom"
-    baseName: "atom"
-    isPlainText: false
-
 outputs:
-  home: ["HTML", "ATOM"]
-  section: ["HTML", "ATOM"]
-  term: ["HTML", "ATOM"]
+  home: ["html", "atom"]
+  section: ["html", "atom"]
+  term: ["html", "atom"]
 
 security:
   allowContent: ["! ^text/html$"]
