@@ -50,3 +50,6 @@ outputs:
   home: ["HTML", "ATOM"]
   section: ["HTML", "ATOM"]
   term: ["HTML", "ATOM"]
+
+security:
+  allowContent: ["! ^text/html$"]
